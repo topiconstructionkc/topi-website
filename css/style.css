@@ -7,7 +7,7 @@
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/inter-600.woff2') format('woff2');}
 :root{
     --chrome-bg:#eceae4; --chrome-ink:#4a5360; --chrome-border:#d8d4ca;
-    --navy:#171d29;
+    --navy:#002147;
     --gold:#fcda9c;
     --gold-ink:#8a6a1e;
     --gold-deep:#2f240a;
@@ -393,3 +393,16 @@
     .carousel-top{flex-direction:column; align-items:flex-start; gap:14px;}
     .totop{right:14px; bottom:14px;}
   }
+
+/* ===== Paleta azul #002147 - fondo completo hero/intro ===== */
+.hero{background:var(--navy);}
+.hero .kicker{color:var(--gold);}
+.hero .kicker::before{background:var(--gold);}
+.hero h1{color:#fff;}
+.hero .sub{color:rgba(255,255,255,.72);}
+.hero .btn-line{border-color:rgba(255,255,255,.4); color:#fff; background:transparent;}
+.hero .btn-line:hover{border-color:#fff; background:rgba(255,255,255,.08); color:#fff;}
+.hero-meta{border-top-color:rgba(255,255,255,.14);}
+.hero-meta div{color:rgba(255,255,255,.65);}
+.hero-dots button{background:rgba(255,255,255,.25);}
+.hero-dots button.on{background:var(--gold);}
