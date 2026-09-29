@@ -406,3 +406,5 @@
 .hero-meta div{color:rgba(255,255,255,.65);}
 .hero-dots button{background:rgba(255,255,255,.25);}
 .hero-dots button.on{background:var(--gold);}
+.hero .btn{background:#fff; color:var(--navy); border-color:#fff;}
+.hero .btn:hover{background:var(--gold); border-color:var(--gold); color:var(--navy);}
