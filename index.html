@@ -250,16 +250,23 @@
             <span>Service area: Kansas and Missouri — Kansas City metro and surrounding communities.</span>
           </div>
         </div>
-        <form class="quote-form" id="form" novalidate>
+        <form class="quote-form" id="form" action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" accept-charset="UTF-8">
+          <!-- Zoho CRM web form (Posibles clientes). Do not remove the hidden fields. -->
+          <input type="hidden" name="xnQsjsdp" value="aa0f5c385bfad7143978982bf3603157ebb6d21d170f45ba3d11c1f7b179fe25">
+          <input type="hidden" name="xmIwtLD" value="bdbbb86b14b0c1b48a01a45f75ee9af770bf4f59cb567cb656e530ded78fb53649fc14781f23fc0b18e6dd8229acca94">
+          <input type="hidden" name="actionType" value="TGVhZHM=">
+          <input type="hidden" name="returnURL" value="https://topiconstructionkc.github.io/topi-website/?sent=1#contact">
+          <input type="hidden" name="zc_gad" id="zc_gad" value="">
+          <input type="text" name="aG9uZXlwb3Q" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none;">
           <h3>Request an estimate</h3>
           <p class="note">Takes under a minute. No cost, no obligation.</p>
-          <input type="text" placeholder="Name *" required>
-          <input type="tel" placeholder="Phone *" required>
-          <input type="email" placeholder="Email *" required>
-          <input type="text" placeholder="Project address or city *" required>
-          <select required><option value="">What are you looking to do? *</option><option>Interior remodeling</option><option>Exterior remodeling</option><option>Both</option><option>Not sure yet</option></select>
-          <textarea placeholder="Tell us about the project"></textarea>
-          <input type="text" placeholder="How did you hear about us? (optional)">
+          <input type="text" name="Last Name" maxlength="80" placeholder="Name *" required>
+          <input type="tel" name="Phone" maxlength="30" placeholder="Phone *" required>
+          <input type="email" name="Email" maxlength="100" placeholder="Email *" required>
+          <input type="text" name="Address - City" maxlength="255" placeholder="Project address or city *" required>
+          <select name="LEADCF2" required><option value="">What are you looking to do? *</option><option>Interior remodeling</option><option>Exterior remodeling</option><option>Both</option><option>Not sure yet</option></select>
+          <textarea name="Description" placeholder="Tell us about the project"></textarea>
+          <input type="text" name="LEADCF1" maxlength="255" placeholder="How did you hear about us? (optional)">
           <button type="submit" class="btn">Send request</button>
           <p class="note" style="margin-top:10px;">We'll never share your information. No obligation, no pressure.</p>
           <p class="form-msg" id="formMsg">Thanks — we've got it. Someone from our team will reach out soon. If it's urgent, call or text us at (913) 706-1029 or (816) 344-0647.</p>
@@ -282,7 +289,7 @@
         </div>
         <div>
           <h4>Contact</h4>
-          <ul><li>Call or text: <a href="tel:+19137061029">(913) 706-1029</a> or <a href="tel:+18163440647">(816) 344-0647</a> </li><li>Email: <a href="topiconstructionkc@gmail.com">topiconstructionkc@gmail.com</a></li></ul>
+          <ul><li>Call or text: <a href="tel:+19137061029">(913) 706-1029</a> or <a href="tel:+18163440647">(816) 344-0647</a> </li><li>Email: <a href="mailto:topiconstructionkc@gmail.com">topiconstructionkc@gmail.com</a></li></ul>
           
         </div>
       </div>

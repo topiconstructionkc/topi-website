@@ -175,11 +175,17 @@
   function startQuotes(){ if(reduce) return; clearInterval(qtimer); qtimer = setInterval(function(){ showQuote(qi+1); }, 5200); }
   startQuotes();
 
-  /* --- formulario de muestra --- */
-  document.getElementById('form').addEventListener('submit', function(e){
-    e.preventDefault();
-    document.getElementById('formMsg').classList.add('on');
+  /* --- formulario de contacto (Zoho CRM) --- */
+  var quoteForm = document.getElementById('form');
+  // Al enviarse, el navegador hace POST a Zoho y Zoho devuelve a ?sent=1#contact
+  quoteForm.addEventListener('submit', function(){
+    var btn = quoteForm.querySelector('button[type="submit"]');
+    setTimeout(function(){ if(btn){ btn.disabled = true; btn.textContent = 'Sending…'; } }, 0);
   });
+  if(/[?&]sent=1/.test(window.location.search)){
+    document.getElementById('formMsg').classList.add('on');
+    if(window.history && history.replaceState){ history.replaceState(null, '', window.location.pathname + '#contact'); }
+  }
 
   /* --- volver arriba --- */
   document.getElementById('totop').addEventListener('click', function(){
