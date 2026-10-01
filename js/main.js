@@ -173,7 +173,7 @@
     qdots.querySelectorAll('button').forEach(function(d,k){ d.classList.toggle('on', k===qi); });
   }
   function startQuotes(){ if(reduce) return; clearInterval(qtimer); qtimer = setInterval(function(){ showQuote(qi+1); }, 5200); }
-  startQuotes();
+  if(quotes.length && qdots) startQuotes(); // reviews section is hidden for now
 
   /* --- formulario de contacto (Zoho CRM) --- */
   var quoteForm = document.getElementById('form');
@@ -186,6 +186,17 @@
     document.getElementById('formMsg').classList.add('on');
     if(window.history && history.replaceState){ history.replaceState(null, '', window.location.pathname + '#contact'); }
   }
+
+  /* --- barra de progreso de scroll --- */
+  var progress = document.getElementById('progress');
+  function updateProgress(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var y = window.scrollY || document.documentElement.scrollTop;
+    if(progress) progress.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, y / h) : 0) + ')';
+  }
+  window.addEventListener('scroll', updateProgress, {passive:true});
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
 
   /* --- volver arriba --- */
   document.getElementById('totop').addEventListener('click', function(){

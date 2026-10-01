@@ -17,14 +17,14 @@
 
 <div class="site">
 
+  <div class="progress" id="progress" aria-hidden="true"></div>
   <div class="topbar" id="topbar">
-    <a href="#top" class="logo">TOPI <span>Construction</span></a>
+    <a href="#top" class="logo" aria-label="Topi Construction"><img src="img/topi-mark-dostonos.png" alt="" class="logo-mark"><b class="logo-text">TOPI <span>Construction</span></b></a>
     <nav class="menu">
       <a href="#top" class="active">Home</a>
       <a href="#services">Services</a>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
-      <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
     </nav>
     <a href="#contact" class="btn">Request estimate</a>
@@ -32,7 +32,7 @@
   </div>
   <div class="drawer" id="drawer">
     <a href="#top">Home</a><a href="#services">Services</a><a href="#about">About</a>
-    <a href="#projects">Projects</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+    <a href="#projects">Projects</a><a href="#contact">Contact</a>
   </div>
 
   <!-- HERO -->
@@ -73,41 +73,35 @@
           <div class="kicker">What we do</div>
           <h2>Two sides of the same house.</h2>
         </div>
-        <p>We handle the rooms you live in and the shell that protects them — with the same crew, the same standards, and one point of contact for both.</p>
+        <p>The rooms you live in and the shell that protects them: one crew, one point of contact.</p>
       </div>
 
-      <div class="tabs" id="tabs">
-        <button class="on" data-tab="0">Interior Remodeling</button>
-        <button data-tab="1">Exterior Remodeling</button>
-        <button data-tab="2">Design Consulting</button>
-      </div>
-
-      <div class="panel on" data-panel="0">
-        <div>
-          <h3>Interior Remodeling</h3>
-          <p>Kitchens, bathrooms, basements and full-home renovations — from a single room to a floor plan that gets reworked from the studs.</p>
-          <a href="#contact" class="btn">Plan your remodel</a>
-        </div>
-        <div class="photo img img-interior-work"></div>
-      </div>
-
-      <div class="panel" data-panel="1">
-        <div>
-          <h3>Exterior Remodeling</h3>
-          <p>Siding, decks, outdoor living and everything that takes the weather. Work that has to look right and hold up through a Kansas winter.</p>
-          <a href="#contact" class="btn">Talk about your build</a>
-        </div>
-        <div class="photo img img-exterior1"></div>
-      </div>
-      <!-- DRAFT: pendiente confirmar copy final con Estefania -->
-      <div class="panel" data-panel="2">
-        <div>
-          <h3>Design Consulting</h3>
-          <p>Two ways we help before construction starts: drafting and design services for your own project, and 3D consulting for other companies working in Revit and SketchUp.</p>
-          <ul><li>Construction drafting and technical plans</li><li>3D modeling and renderings</li><li>Revit / SketchUp consulting for design and engineering teams</li></ul>
-          <a href="#contact" class="btn">Talk about your project</a>
-        </div>
-        <div class="photo img img-bedroom-design"></div>
+      <div class="svc-cards reveal">
+        <article class="svc-card">
+          <div class="photo img img-interior-work"></div>
+          <div class="svc-body">
+            <h3>Interior Remodeling</h3>
+            <p>Kitchens, bathrooms, basements and full-home renovations.</p>
+            <a href="#contact" class="btn">Plan your remodel</a>
+          </div>
+        </article>
+        <article class="svc-card">
+          <div class="photo img img-exterior1"></div>
+          <div class="svc-body">
+            <h3>Exterior Remodeling</h3>
+            <p>Siding, decks and outdoor living, built for a Kansas winter.</p>
+            <a href="#contact" class="btn">Talk about your build</a>
+          </div>
+        </article>
+        <!-- DRAFT: pendiente confirmar copy final con Estefania -->
+        <article class="svc-card">
+          <div class="photo img img-bedroom-design"></div>
+          <div class="svc-body">
+            <h3>Design Consulting</h3>
+            <p>Drafting, 3D modeling and Revit / SketchUp consulting.</p>
+            <a href="#contact" class="btn">Talk about your project</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -133,7 +127,7 @@
   -->
 
   <!-- ABOUT -->
-  <section class="section" id="about">
+  <section class="section bone" id="about">
     <div class="inner">
       <div class="head reveal">
         <div class="kicker">About us</div>
@@ -156,12 +150,45 @@
     </div>
   </section>
 
+  <!-- PROCESS -->
+  <section class="section process" id="process">
+    <div class="inner">
+      <div class="head reveal">
+        <div>
+          <div class="kicker">How we work</div>
+          <h2>We're with you the whole way.</h2>
+        </div>
+        <p>From the first conversation until your project is finished.</p>
+      </div>
+      <div class="steps reveal">
+        <div class="step">
+          <div class="sq"></div>
+          <h3>We listen first</h3>
+          <p>Tell us what you want to change. We visit, ask and understand.</p>
+        </div>
+        <div class="step">
+          <div class="sq"></div>
+          <h3>We design with an architect's eye</h3>
+          <p>We plan how the space should work and look before we build.</p>
+        </div>
+        <div class="step">
+          <div class="sq"></div>
+          <h3>We stay until it's done</h3>
+          <p>One point of contact, from the first visit to the final walkthrough.</p>
+        </div>
+      </div>
+      <div class="steps-cta reveal">
+        <p><b>With you from the first call until the work is done.</b></p>
+        <a href="#contact" class="text-link">Start the conversation <span class="arr" aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
   <!-- ANTES / DESPUÉS -->
   <section class="section bone">
     <div class="inner">
       <div class="head reveal">
         <div>
-          <div class="kicker">Before &amp; after</div>
           <h2>See the difference </h2>
         </div>
       </div>
@@ -190,8 +217,8 @@
       <div class="track" id="track">
         <div class="slide-card" aria-hidden="true" data-clone="1"><div class="photo img img-deck-patio"></div><div class="cap"><b>Deck & Patio</b><span>Kansas City</span></div></div>
         <div class="slide-card"><div class="photo img img-kitchen-remodel"></div><div class="cap"><b>Kitchen remodel</b><span>Kansas City</span></div></div>
-        <div class="slide-card"><div class="photo img img-bath-real hover-swap"><div class="hover-layer img-bath-before"></div></div><div class="cap"><b>Bathroom remodel</b><span>Kansas City</span></div></div>
-        <div class="slide-card"><div class="photo img img-master-suite"></div><div class="cap"><b>Master suite</b><span>Miami</span></div></div>
+        <div class="slide-card"><div class="photo img img-bath-real"></div><div class="cap"><b>Bathroom remodel</b><span>Kansas City</span></div></div>
+        <div class="slide-card"><div class="photo img img-stairs-after hover-swap"><div class="hover-layer img-stairs-before"></div></div><div class="cap"><b>Stair remodel</b><span>Kansas City</span></div></div>
         <div class="slide-card"><div class="photo img img-deck-patio"></div><div class="cap"><b>Deck & Patio</b><span>Kansas City</span></div></div>
         <div class="slide-card" aria-hidden="true" data-clone="1"><div class="photo img img-kitchen-remodel"></div><div class="cap"><b>Kitchen remodel</b><span>Kansas City</span></div></div>
         <div class="track-spacer" aria-hidden="true"></div>
@@ -201,6 +228,7 @@
   </section>
 
   <!-- RESEÑAS -->
+  <!-- REMOVED (Oct 1): reviews section hidden until real Google reviews are available
   <section class="section bone" id="reviews">
     <div class="inner">
       <div class="head reveal">
@@ -218,8 +246,10 @@
       <div class="dots" id="qdots"></div>
     </div>
   </section>
+  -->
 
   <!-- TEAM — placeholders de IA con branding Topi, usados solo como referencia de estilo para el brief del fotógrafo/empleados reales (remera de marca, fondo de obra). NO son fotos de empleados reales: reemplazar por las fotos y nombres reales antes de publicar el sitio en vivo. Cambiar la clase img-team-ph1/2/3 en css/style.css por la foto real, y reemplazar [confirm name] / [confirm role]. -->
+  <!-- REMOVED (Oct 1): team section hidden until real photos/names are available
   <section class="section">
     <div class="inner">
       <div class="head reveal">
@@ -236,6 +266,7 @@
       </div>
     </div>
   </section>
+  -->
 
   <!-- CONTACTO -->
   <section class="section bone" id="contact">
@@ -282,7 +313,7 @@
         <div>
           <h4>TOPI Construction</h4>
           <p>Interior &amp; Exterior Remodeling.</p>
-           <img src="img/topi-logo-transparente.png" alt="Topi Construction &amp; Remodeling" class="contact-logo">
+           <img src="img/topi-logo-blanco.png" alt="Topi Construction &amp; Remodeling" class="contact-logo">
         </div>
         <div>
           <h4>Site</h4>
