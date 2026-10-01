@@ -756,3 +756,23 @@ p.note, .quote-form p.note{font-size:14px;}
 .foot-bottom{padding:24px 0; font-size:14px;}
 @media (max-width:1000px){ .foot.foot4{grid-template-columns:1fr 1fr; gap:40px 32px;} }
 @media (max-width:600px){ .foot.foot4{grid-template-columns:1fr; gap:34px;} .foot4 h4{margin-bottom:16px;} .foot-contact a{white-space:normal; word-break:break-word;} }
+
+/* Contact section: same lettering as the footer (17px text, 20px headings) */
+.contact .lede{font-size:17px; line-height:1.7; max-width:42ch;}
+.cinfo{font-size:17px; line-height:1.55; gap:16px;}
+.cinfo span, .cinfo a{font-size:17px;}
+form.quote-form h3{font-size:20px; letter-spacing:.1em; margin-bottom:8px;}
+form.quote-form .note, form.quote-form p.note{font-size:16px;}
+form.quote-form input, form.quote-form select, form.quote-form textarea, form.quote-form option{font-size:17px;}
+form.quote-form input, form.quote-form select{padding-top:14px; padding-bottom:14px;}
+form.quote-form .btn{font-size:15px;}
+.form-msg{font-size:16px;}
+form.quote-form .note, form.quote-form p.note, .form-msg{font-size:17px;}
+form.quote-form .btn{font-size:16px;}
+
+/* Contact info rows with gold icons (same as footer) */
+.cinfo .ci-row{display:flex; gap:16px; align-items:flex-start;}
+.cinfo .ci-row svg{width:22px; height:22px; color:var(--gold-deep); flex:none; margin-top:4px;}
+.cinfo .ci-row a{color:var(--ink-soft); text-decoration:none; transition:color .2s ease;}
+.cinfo .ci-row a:hover{color:var(--navy); text-decoration:underline; text-decoration-color:var(--gold-deep); text-underline-offset:4px;}
+.cinfo .ci-row a[href^="mailto"]{word-break:break-word;}
