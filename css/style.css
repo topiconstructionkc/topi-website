@@ -776,3 +776,432 @@ form.quote-form .btn{font-size:16px;}
 .cinfo .ci-row a{color:var(--ink-soft); text-decoration:none; transition:color .2s ease;}
 .cinfo .ci-row a:hover{color:var(--navy); text-decoration:underline; text-decoration-color:var(--gold-deep); text-underline-offset:4px;}
 .cinfo .ci-row a[href^="mailto"]{word-break:break-word;}
+
+
+/* ===== Copy v2 de TOPI (5/10/2026) ===== */
+/* hero: 5 lugares */
+.hero-meta{grid-template-columns:repeat(5,1fr);}
+@media (max-width:600px){ .hero-meta{grid-template-columns:repeat(3,1fr);} .hero-meta div{padding:12px 0;} }
+/* services: listas, pasos, botón único y estadísticas debajo */
+.svc-steps{list-style:none; counter-reset:s; margin:0 0 6px; padding:0; display:flex; flex-direction:column; gap:10px;}
+.svc-steps li{counter-increment:s; position:relative; padding-left:32px; font-size:13.5px; line-height:1.55; color:var(--ink-soft);}
+.svc-steps li::before{content:counter(s); position:absolute; left:0; top:0; width:22px; height:22px; border-radius:50%; background:var(--navy); color:#fff; font-family:"Montserrat",sans-serif; font-weight:700; font-size:11px; display:flex; align-items:center; justify-content:center;}
+.svc-steps b{color:var(--navy);}
+.svc-cta{display:flex; justify-content:center; margin-top:38px;}
+#services .stats{margin-top:48px;}
+/* process: 4 pasos y un botón */
+.steps.steps4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:1040px){ .steps.steps4{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:640px){ .steps.steps4{grid-template-columns:1fr;} }
+.process .steps-cta.steps-cta-btn{display:flex; justify-content:center; border-top:none; margin-top:36px; padding-top:0;}
+.process .steps-cta.steps-cta-btn .btn{background:var(--navy); color:#fff; border-color:var(--navy);}
+.process .steps-cta.steps-cta-btn .btn:hover{background:var(--gold); color:var(--navy); border-color:var(--gold);}
+.process .head p{max-width:56ch;}
+/* about: frase destacada */
+.about blockquote.pull{margin:0 0 22px; padding:4px 0 4px 20px; border-left:3px solid var(--gold-deep); font-family:"Montserrat",sans-serif; font-weight:700; font-size:clamp(17px,1.9vw,21px); line-height:1.45; color:var(--navy);}
+/* flechas del carrusel: azul con flecha dorada */
+.arrows button{background:var(--navy); color:var(--gold); border-color:var(--navy);}
+.arrows button:hover{background:var(--gold); color:var(--navy); border-color:var(--gold);}
+/* contacto: botones de teléfono y datos en rectángulos de color */
+.phone-btns{display:flex; flex-direction:column; gap:12px; margin-bottom:18px; max-width:440px;}
+.phone-btn{display:flex; align-items:center; gap:14px; background:var(--navy); color:#fff; text-decoration:none; font-family:"Montserrat",sans-serif; font-weight:700; font-size:17px; letter-spacing:.03em; padding:18px 24px; border-radius:10px; transition:background .2s ease, color .2s ease, transform .2s ease;}
+.phone-btn svg{width:22px; height:22px; color:var(--gold); flex:none;}
+.phone-btn:hover{background:var(--gold); color:var(--navy); transform:translateY(-2px);}
+.phone-btn:hover svg{color:var(--navy);}
+.cinfo{border-top:none; padding-top:0; max-width:440px;}
+.cinfo .ci-row{align-items:center; background:var(--bone-2); border-left:4px solid var(--gold-deep); border-radius:8px; padding:16px 18px;}
+.cinfo .ci-row svg{margin-top:0;}
+/* pie simple: logo, redes y derechos */
+.foot-simple{display:flex; align-items:center; justify-content:space-between; gap:24px; padding:36px 0; flex-wrap:wrap;}
+.foot-simple .contact-logo{margin:0; height:84px;}
+.foot-simple .social{margin:0;}
+.foot-rights{font-size:14px; color:var(--ink-muted);}
+@media (max-width:700px){ .foot-simple{flex-direction:column; align-items:flex-start;} }
+.process .head h2{max-width:22ch;}
+
+/* ===== Projects: cuadrícula de 8 con antes/después al pasar el mouse (solo escritorio) · 5/10/2026 ===== */
+.proj-grid{display:none;}
+@media (min-width:901px){
+  #projects .carousel-top, #projects .track, #projects .dots{display:none;}
+  .proj-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:30px;}
+  .proj-card{position:relative; margin:0; aspect-ratio:4/5; border-radius:14px; overflow:hidden; background:var(--navy); outline:none; box-shadow:0 1px 0 rgba(29,61,110,.06);}
+  .pc-img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; transition:opacity .45s ease, transform .6s ease;}
+  .pc-before{opacity:0;}
+  .proj-card:hover .pc-before, .proj-card:focus-visible .pc-before{opacity:1;}
+  .proj-card:hover .pc-img, .proj-card:focus-visible .pc-img{transform:scale(1.03);}
+  .pc-loc{position:absolute; top:12px; left:12px; z-index:2; padding:6px 12px; border-radius:999px; background:rgba(29,61,110,.88); color:#fff; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;}
+  .proj-soon{display:flex; align-items:center; justify-content:center; text-align:center; background:linear-gradient(160deg,var(--navy),#16305a);}
+  .pc-soon{color:rgba(255,255,255,.75); font-size:13px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; line-height:1.7;}
+}
+@media (min-width:901px) and (max-width:1100px){ .proj-grid{grid-template-columns:repeat(3,1fr);} }
+
+/* ===== Formas más redondeadas (TOPI pidió menos "cuadrado") · 5/10/2026 ===== */
+.photo, .slide, .ba, .hero-shot{border-radius:24px;}
+.svc-card{border-radius:26px; overflow:hidden;}
+.svc-card .photo{border-radius:0;}
+.process .step, .step{border-radius:28px; border-top-width:1px; border-top-color:rgba(255,255,255,.18); padding:34px 30px 32px;}
+.step .sq{width:16px; height:16px; border-radius:50%; margin-bottom:22px; background:var(--gold);}
+.cols .sq{border-radius:50%;}
+.svc-body li::before, .panel li::before{border-radius:50%;}
+.kicker::before{border-radius:2px;}
+.arrows button{border-radius:50%; width:46px; height:46px; display:inline-flex; align-items:center; justify-content:center; padding:0;}
+.dots button{border-radius:3px;}
+.phone-btn{border-radius:999px;}
+.cinfo .ci-row{border-radius:18px;}
+form.quote-form input, form.quote-form select, form.quote-form textarea{border-radius:14px;}
+.proj-card{border-radius:24px;}
+.pc-loc{border-radius:999px;}
+.contact-logo{border-radius:0;}
+@media (min-width:901px){ .proj-card{border-radius:24px;} }
+
+/* ===== Pasada de coherencia visual (5/10/2026): una sola regla de formas y títulos más calmos =====
+   Regla: contenedores y fotos con la misma curva (--r-card), botones y etiquetas en píldora,
+   círculos solo para detalles chicos (números, íconos). Sin cambios de texto. */
+:root{--r-card:24px;}
+.photo, .slide, .ba, .hero-shot{border-radius:var(--r-card); overflow:hidden;}
+.svc-card{border-radius:var(--r-card); overflow:hidden;}
+.svc-card .photo{border-radius:0;}
+.proj-card{border-radius:var(--r-card);}
+form.quote-form{border-radius:var(--r-card);}
+form.quote-form input, form.quote-form select, form.quote-form textarea{border-radius:14px;}
+.cinfo .ci-row{border-radius:20px;}
+.phone-btn{border-radius:999px;}
+.svc-body li::before, .panel li::before{border-radius:50%;}
+.arrows button{border-radius:50%;}
+
+/* Títulos de sección: menos gritones */
+.head h2, .about h2, .contact h2{font-size:clamp(24px,2.9vw,34px); line-height:1.12; letter-spacing:1px;}
+.head h2{max-width:24ch;}
+.contact h2{max-width:16ch;}
+
+/* Process: tarjetas con la misma curva y número en círculo dorado */
+.process .steps4{counter-reset:paso; grid-template-columns:repeat(4,1fr); gap:20px; max-width:none; margin:0;}
+.process .steps4 .step{
+  display:block; aspect-ratio:auto; text-align:left; border-radius:var(--r-card);
+  padding:30px 26px 32px; border:1px solid rgba(255,255,255,.18);
+}
+.process .steps4 .step .sq{
+  counter-increment:paso; width:36px; height:36px; margin:0 0 20px; border-radius:50%;
+  background:var(--gold); color:var(--navy); display:flex; align-items:center; justify-content:center;
+}
+.process .steps4 .step .sq::before{content:counter(paso); font-family:"Montserrat",sans-serif; font-weight:800; font-size:14px;}
+.process .steps4 .step h3{font-size:14px; margin-bottom:10px;}
+.process .steps4 .step p{font-size:14px; line-height:1.65;}
+@media (max-width:1080px){ .process .steps4{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:600px){ .process .steps4{grid-template-columns:1fr; gap:14px;} .process .steps4 .step{padding:24px 22px;} }
+
+/* Estadísticas: tres tarjetas suaves en vez de líneas rectas */
+#services .stats{border-top:0; gap:16px; margin-top:40px;}
+#services .stats div{border:0; background:rgba(29,61,110,.05); border-radius:var(--r-card); padding:26px 28px;}
+#services .stats div:first-child{padding-left:28px;}
+@media (max-width:720px){ #services .stats{grid-template-columns:1fr;} }
+.cinfo .ci-row{border-left:0;}
+
+/* ===== Fotos que emergen hacia arriba al hacer scroll · 5/10/2026 ===== */
+.js .rise{opacity:0; transform:translateY(64px) scale(.97); transition:opacity .85s cubic-bezier(.2,.7,.2,1), transform .95s cubic-bezier(.2,.7,.2,1);}
+.js .rise.in-view{opacity:1; transform:none;}
+@media (prefers-reduced-motion:reduce){ .js .rise{opacity:1; transform:none; transition:none;} }
+
+/* ===== Footer: banda azul centrada, mismo estilo que el hero · 5/10/2026 ===== */
+footer.site-footer{background:var(--navy); border-top:0; border-radius:32px 32px 0 0; padding:0; margin-top:24px;}
+.foot-simple{flex-direction:column; align-items:center; justify-content:center; gap:22px; padding:52px 0 40px; text-align:center;}
+.foot-simple .contact-logo{height:104px; margin:0;}
+.foot-simple .social{justify-content:center; gap:14px;}
+.foot-simple .social-link{background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,255,255,.28);}
+.foot-simple .social-link:hover{background:var(--gold); color:var(--navy); border-color:var(--gold); transform:translateY(-3px);}
+.foot-rights{display:block; width:100%; margin-top:6px; padding-top:22px; border-top:1px solid rgba(255,255,255,.16); font-size:13.5px; color:rgba(255,255,255,.7);}
+@media (max-width:700px){ .foot-simple{align-items:center;} }
+
+/* Footer claro (sin fondo azul) · 5/10/2026 */
+footer.site-footer{background:#F3F6FB; border-radius:32px 32px 0 0;}
+.foot-simple .contact-logo{height:112px;}
+.foot-simple .social-link{background:var(--navy); color:#fff; border:0;}
+.foot-simple .social-link:hover{background:var(--gold); color:var(--navy);}
+.foot-rights{border-top:1px solid rgba(29,61,110,.14); color:var(--ink-muted);}
+
+/* ===== Process: línea de tiempo animada (claro, con movimiento) · 5/10/2026 ===== */
+.process .steps4{position:relative; padding-top:0;}
+.process .steps4 .steps-track{display:none;}
+.js .process .steps4 .step,
+.js .process .steps4.in .step{
+  display:block; text-align:left; aspect-ratio:auto; position:relative;
+  background:#F3F6FB; border:1px solid rgba(29,61,110,.08); border-radius:var(--r-card);
+  padding:26px 26px 30px; box-shadow:none;
+  opacity:.55; transform:translateY(26px);
+  transition:opacity .6s ease, transform .7s cubic-bezier(.2,.7,.2,1), box-shadow .5s ease, background .5s ease;
+}
+.js .process .steps4 .step.on,
+.js .process .steps4.in .step.on{
+  opacity:1; transform:none; background:#fff; border-color:rgba(29,61,110,.1);
+  box-shadow:0 18px 44px rgba(29,61,110,.12);
+}
+@media (hover:hover){
+  .js .process .steps4.in .step.on:hover{transform:translateY(-6px); box-shadow:0 24px 52px rgba(29,61,110,.18);}
+}
+.process .steps4 .step h3{color:var(--navy); font-size:14px; margin:0 0 10px;}
+.process .steps4 .step p{color:var(--ink-soft); font-size:14.5px; line-height:1.65;}
+.process .steps4 .step .sq{
+  counter-increment:paso; width:38px; height:38px; margin:0 0 18px; border-radius:50%;
+  background:#fff; border:2px solid rgba(29,61,110,.22); color:rgba(29,61,110,.45);
+  display:flex; align-items:center; justify-content:center;
+  transition:background .4s ease, color .4s ease, border-color .4s ease, transform .5s cubic-bezier(.3,1.6,.5,1);
+}
+.process .steps4 .step .sq::before{content:counter(paso); font:800 14px "Montserrat",sans-serif;}
+.process .steps4 .step.on .sq{background:var(--navy); border-color:var(--navy); color:var(--gold); transform:scale(1.12); animation:stepPulse 1.2s ease-out 1;}
+@keyframes stepPulse{0%{box-shadow:0 0 0 0 rgba(252,218,156,.9);}100%{box-shadow:0 0 0 16px rgba(252,218,156,0);}}
+
+/* Escritorio ancho: la línea corre por encima de las tarjetas y los números quedan sobre ella */
+@media (min-width:1081px){
+  .process .steps4{padding-top:62px;}
+  .process .steps4 .steps-track{display:block; position:absolute; top:19px; left:45px; width:calc(75% + 15px); height:3px; border-radius:3px; background:rgba(29,61,110,.14);}
+  .process .steps4 .steps-track i{display:block; height:100%; width:calc(var(--pl,0) * 100%); background:linear-gradient(90deg,var(--gold),var(--gold-deep,#B07D22)); border-radius:3px; transition:width .12s linear;}
+  .process .steps4 .step .sq{position:absolute; top:-62px; left:26px; margin:0;}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .process .steps4 .step, .js .process .steps4.in .step{opacity:1; transform:none; transition:none; background:#fff;}
+  .process .steps4 .step .sq{animation:none;}
+}
+
+/* ---- Formulario: campos en el amarillo de la paleta (--gold #fcda9c), antes azul clarito ---- */
+form.quote-form input, form.quote-form select, form.quote-form textarea{background:var(--gold); border-color:#E8BE72;}
+form.quote-form input:focus, form.quote-form select:focus, form.quote-form textarea:focus{background:var(--gold); border-color:var(--navy);}
+form.quote-form input::placeholder, form.quote-form textarea::placeholder{color:#6b5a30;}
+
+/* ---- Letras pequeñas más grandes en toda la web (pedido de TOPI) ---- */
+.hero-meta div, .pc-loc{font-size:14px;}
+.pc-soon{font-size:15px;}
+.svc-card li, .svc-steps li, .svc-steps li b{font-size:16px; line-height:1.5;}
+.svc-body{font-size:16.5px; line-height:1.6;}
+.menu a{font-size:15px;}
+.btn, a.btn, button.btn{font-size:16px;}
+.kicker{font-size:15px;}
+.stats span{font-size:17px;}
+.cap b, .cap span{font-size:16px;}
+.step h3{font-size:16px;}
+.step p{font-size:16.5px; line-height:1.55;}
+.foot-rights{font-size:15px;}
+.logo-text, .logo-text span{font-size:16px;}
+form.quote-form input, form.quote-form select, form.quote-form textarea, form.quote-form option{font-size:17px;}
+
+/* ---- Más amarillo de la paleta (#fcda9c) ---- */
+#about{background:#FFF3DB;}
+.stats div, #services .stats div{background:var(--gold);}
+.stats b, .stats strong, .stats div > :first-child{color:var(--navy);}
+.stats span{color:var(--gold-deep);}
+.cinfo .ci-row{background:var(--gold); border-left-color:var(--navy);}
+.cinfo .ci-row, .cinfo .ci-row a{color:var(--gold-deep);}
+.svc-card{border-top:6px solid var(--gold);}
+.process .steps4 .step{background:#FFF3DB; border-color:#F1D79F;}
+.process .steps4 .step.on{background:#fff;}
+section h2::after{content:""; display:block; width:64px; height:5px; border-radius:3px; background:var(--gold); margin-top:14px;}
+form.quote-form .note, form.quote-form p.note{font-size:18px; line-height:1.4;}
+form.quote-form h3{font-size:22px;}
+.form-msg{font-size:17px;}
+.process .steps4 .step h3{font-size:17px; line-height:1.3;}
+.process .steps4 .step p{font-size:16.5px; line-height:1.55;}
+.process .steps4 .step{padding-bottom:26px;}
+.stats div span, #services .stats div span{font-size:17px;}
+
+/* ---- Ajuste final de tamaños: +2px sobre el tamaño original en los textos chicos ---- */
+body .menu a{font-size:16px;}
+body .topbar a.btn, body .ctas a.btn, body a.btn, body button.btn{font-size:16px;}
+body .hero .kicker, body .kicker{font-size:16px;}
+body .svc-card .svc-body, body .svc-body{font-size:16.5px;}
+body .foot-rights{font-size:15.5px;}
+body .logo-text, body .logo-text span{font-size:17px;}
+body .hero-meta div{font-size:14px;}
+body form.quote-form .note{font-size:17px;}
+body .form-msg{font-size:17px;}
+body section .kicker, body .head .kicker{font-size:16px !important;}
+body .svc-card p.svc-body, body p.svc-body{font-size:16.5px !important;}
+body form.quote-form .note, body form.quote-form p.note, body .quote-form .note{font-size:18px !important;}
+body .cinfo .ci-row, body .cinfo .ci-row *{color:#2f240a;}
+body .svc-body p{font-size:16.5px !important; line-height:1.6;}
+
+/* ---- Sin el azul clarito de fondo: Projects y pie en el amarillo suave de la paleta ---- */
+body section.bone#projects, body #projects{background:#FFF3DB;}
+body footer.site-footer{background:#FFF3DB;}
+body .proj-soon{background:var(--gold); border:1.5px dashed #C99A3E;}
+body .proj-soon .pc-soon, body .proj-soon span{color:var(--gold-deep);}
+
+/* ---- Estadísticas: sin fondo (como estaban) ---- */
+body .stats div, body #services .stats div{background:transparent; box-shadow:none;}
+body .stats div span, body #services .stats div span{color:var(--ink-soft);}
+
+/* ---- Textos de párrafo y listas: +2 px en toda la web (pedido de TOPI) ---- */
+body .hero p.sub{font-size:18px !important; line-height:1.6;}
+body .svc-card li, body .svc-steps li, body .svc-steps li b{font-size:18px !important; line-height:1.5;}
+body .svc-body p{font-size:18px !important; line-height:1.6;}
+body .process .head p, body .head.reveal p{font-size:18px !important; line-height:1.65;}
+body .process .steps4 .step p{font-size:18px !important; line-height:1.55;}
+body .about p:not(.pull){font-size:18px !important; line-height:1.75;}
+body .about blockquote.pull{font-size:clamp(19px,2vw,23px);}
+body .contact p.lede, body p.lede{font-size:19px !important; line-height:1.65;}
+body form.quote-form .note, body .quote-form p.note{font-size:18px !important;}
+body .process .steps4 .step h3{font-size:18px;}
+
+/* ---- Menú de arriba en dorado de la paleta ---- */
+body .topbar .menu a{color:#B07D22;}
+body .topbar .menu a:hover{color:var(--navy);}
+
+/* ---- Invertido: fondos en el dorado de las letras "Portfolio" (#B07D22) y esas letras en el tono suave ---- */
+body #projects, body #about, body footer.site-footer{background:#B07D22;}
+body #projects h2, body #about h2{color:#fff;}
+body #projects .kicker, body #about .kicker{color:#FFF3DB;}
+body #projects .kicker::before, body #about .kicker::before{background:#FFF3DB;}
+body #about p:not(.pull), body #about .pull{color:#fff;}
+body #about blockquote.pull{border-left-color:#FFF3DB;}
+body #projects .cap b{color:#fff;} body #projects .cap span{color:#FFF3DB;}
+body footer.site-footer .foot-rights{color:#fff; border-top-color:rgba(255,255,255,.35);}
+body footer.site-footer .social-link{background:var(--navy); color:#fff;}
+body section.bone#projects, body section.bone#about{background:#B07D22;}
+
+/* ---- Contacto: campos y datos en el dorado (#B07D22), textos en el tono suave ---- */
+body form.quote-form input, body form.quote-form select, body form.quote-form textarea{background:#B07D22; border-color:#8E6213; color:#fff;}
+body form.quote-form input:focus, body form.quote-form select:focus, body form.quote-form textarea:focus{background:#B07D22; border-color:var(--navy);}
+body form.quote-form input::placeholder, body form.quote-form textarea::placeholder{color:#FFF3DB; opacity:1;}
+body form.quote-form select{color:#FFF3DB;}
+body form.quote-form select option{background:#fff; color:#1b2230;}
+body .cinfo .ci-row, body .cinfo .ci-row *{color:#fff;}
+body .cinfo .ci-row{background:#B07D22; border-left-color:#FFF3DB;}
+body .cinfo .ci-row svg{color:#FFF3DB;}
+
+/* ---- Formulario: el marco (tarjeta) en dorado y los campos por dentro en blanco ---- */
+body form.quote-form{background:#B07D22; border-color:#8E6213;}
+body form.quote-form h3{color:#fff;}
+body form.quote-form .note, body form.quote-form p.note{color:#FFF3DB !important;}
+body form.quote-form input, body form.quote-form select, body form.quote-form textarea{background:#fff; border-color:#E6DCC4; color:var(--ink);}
+body form.quote-form input:focus, body form.quote-form select:focus, body form.quote-form textarea:focus{background:#fff; border-color:var(--navy);}
+body form.quote-form input::placeholder, body form.quote-form textarea::placeholder{color:#7a8496; opacity:1;}
+body form.quote-form select{color:#4c545f;}
+body .form-msg{color:#fff;}
+
+/* ---- Contacto: dorado traslúcido, más clarito y en degradado parejo ---- */
+body form.quote-form{background:linear-gradient(160deg, rgba(176,125,34,.34) 0%, rgba(176,125,34,.14) 100%); border-color:rgba(176,125,34,.38);}
+body form.quote-form h3{color:var(--navy);}
+body form.quote-form .note, body form.quote-form p.note{color:var(--gold-deep) !important;}
+body .form-msg{color:var(--navy);}
+body .cinfo .ci-row{background:linear-gradient(160deg, rgba(176,125,34,.34) 0%, rgba(176,125,34,.16) 100%); border-left-color:#B07D22;}
+body .cinfo .ci-row, body .cinfo .ci-row *{color:var(--gold-deep);}
+body .cinfo .ci-row svg{color:#8a6a1e;}
+body form.quote-form .note, body form.quote-form p.note{color:#3a2a08 !important;}
+body .cinfo .ci-row, body .cinfo .ci-row *{color:#3a2a08;}
+body .cinfo .ci-row svg{color:#8a6a1e;}
+
+/* ---- Dorado más claro, mismo tono que el #B07D22 pero con su color vivo (sin grisarse) ---- */
+body form.quote-form{background:linear-gradient(160deg, #E6BE72 0%, #F6E3B8 100%); border-color:#D9AE57;}
+body .cinfo .ci-row{background:linear-gradient(160deg, #E6BE72 0%, #F6E3B8 100%);}
+
+/* ---- Pie de página con fondo blanco ---- */
+body footer.site-footer{background:#fff; border-top:1px solid rgba(29,61,110,.12);}
+body footer.site-footer .foot-rights{color:var(--ink-soft); border-top-color:rgba(29,61,110,.14);}
+body footer.site-footer .social-link{background:var(--navy); color:#fff;}
+
+/* ---- Projects y About: dorado claro en degradado (como el formulario), textos otra vez oscuros ---- */
+body section.bone#projects, body section.bone#about, body #projects, body #about{background:linear-gradient(160deg, #E6BE72 0%, #F6E3B8 100%);}
+body #projects h2, body #about h2{color:var(--navy);}
+body #projects .kicker, body #about .kicker{color:#8a5f12;}
+body #projects .kicker::before, body #about .kicker::before{background:#8a5f12;}
+body #about p:not(.pull){color:#2b2208;}
+body #about .pull, body #about blockquote.pull{color:var(--navy);}
+body #about blockquote.pull{border-left-color:#8a5f12;}
+body #projects .cap b{color:var(--navy);} body #projects .cap span{color:#3a2a08;}
+body #projects h2::after, body #about h2::after{background:#8a5f12;}
+body .proj-soon{background:rgba(255,255,255,.55); border:1.5px dashed #B07D22;}
+body .proj-soon .pc-soon, body .proj-soon span{color:#3a2a08;}
+
+/* ---- About: párrafos a 14 pt (≈18,7 px) ---- */
+body .about p:not(.pull), body #about p:not(.pull){font-size:15pt !important; line-height:1.75;}
+
+/* ---- About (escritorio): la foto queda a la derecha y el texto que sobra pasa debajo de la imagen ---- */
+@media (min-width:901px){
+  body:not(.vb) .about{display:block;}
+  body:not(.vb) .about::after{content:""; display:block; clear:both;}
+  body:not(.vb) .about > .photo{float:right; width:calc(52% - 34px); height:420px; margin:0 0 28px 56px;}
+  body:not(.vb) .about > div:first-of-type{display:block;}
+}
+/* En celular se mantiene el orden de antes: primero el texto y después la foto */
+@media (max-width:900px){
+  body:not(.vb) .about{display:flex; flex-direction:column; align-items:stretch; gap:34px;}
+  body:not(.vb) .about > .photo{order:2; width:100%;}
+}
+
+/* ---- Textos de cuerpo: todos a 14 pt (≈18,7 px), igual que About ---- */
+body .hero p.sub{font-size:14pt !important;}
+body .svc-card li, body .svc-steps li, body .svc-steps li b{font-size:14pt !important;}
+body .svc-body p{font-size:14pt !important;}
+body .process .head p, body .head.reveal p{font-size:14pt !important;}
+body .process .steps4 .step p{font-size:14pt !important;}
+
+/* ---- Legibilidad: textos de cuerpo a 15 pt (20 px) y con más contraste ---- */
+body .hero p.sub, body .svc-card li, body .svc-steps li, body .svc-steps li b, body .svc-body p,
+body .process .head p, body .head.reveal p, body .process .steps4 .step p, body .about p:not(.pull){font-size:15pt !important; line-height:1.6;}
+body .svc-card li, body .svc-steps li, body .svc-body p, body .process .head p, body .head.reveal p,
+body .process .steps4 .step p, body p.lede, body .stats span, body .cap span, body footer.site-footer .foot-rights{color:#1c2430;}
+body .svc-steps li b{color:var(--navy);}
+body .hero p.sub{color:#fff;}
+body p.lede{font-size:15pt !important;}
+body form.quote-form .note, body form.quote-form p.note{font-size:15pt !important;}
+body .process .steps4 .step h3{font-size:16pt;}
+body .stats span{font-size:15pt;}
+
+/* ===== Escala uniforme de textos pequeños (versión web): nada por debajo de 16 px ===== */
+body .hero-meta div, body .hero-meta{font-size:17px !important;}
+body .pc-loc{font-size:16px !important;}
+body .pc-soon{font-size:17px !important; line-height:1.6;}
+body .foot-rights{font-size:17px !important;}
+body .kicker, body section .kicker, body .head .kicker{font-size:17px !important;}
+body a.btn, body button.btn, body .topbar a.btn, body .ctas a.btn, body .svc-cta, body .steps-cta-btn{font-size:17px !important;}
+body .cap b{font-size:20px !important;} body .cap span{font-size:18px !important;}
+body .stats span, body .stats div span{font-size:20px !important; line-height:1.4;}
+body .phone-btn span, body .cinfo .ci-row, body .cinfo .ci-row a, body .cinfo .ci-row span{font-size:19px !important;}
+body .form-msg{font-size:18px !important;}
+body p.lede, body .contact p.lede{font-size:20px !important; line-height:1.6;}
+body .svc-body h3, body .svc-card h3{font-size:21px !important;}
+body form.quote-form input, body form.quote-form select, body form.quote-form textarea, body form.quote-form option{font-size:18px !important;}
+body .totop{font-size:18px;}
+@media (min-width:1281px){ body .menu a{font-size:17px !important;} }
+@media (max-width:1280px){ body .menu a{font-size:16px !important;} }
+
+/* ---- Projects y About: el mismo degradado que el formulario (recorrido fijo, así se ven iguales aunque la sección sea más grande) ---- */
+body section.bone#projects, body section.bone#about, body #projects, body #about{background:linear-gradient(160deg, #E6BE72 0, #F6E3B8 760px, #F6E3B8 100%);}
+body p.lede, body .contact p.lede, body #contact p.lede{color:#1c2430 !important;}
+
+/* ===== Textos pequeños al tamaño más grande usado (20 px); en mayúsculas con espaciado, 18 px ===== */
+body .hero-meta div, body .hero-meta, body .pc-soon, body .foot-rights, body .cap span, body .form-msg,
+body .phone-btn span, body .cinfo .ci-row, body .cinfo .ci-row a, body .cinfo .ci-row span,
+body form.quote-form input, body form.quote-form select, body form.quote-form textarea, body form.quote-form option,
+body form.quote-form .note, body form.quote-form p.note{font-size:20px !important;}
+body .cap b{font-size:22px !important;}
+body .pc-loc, body .kicker, body section .kicker, body .head .kicker, body a.btn, body button.btn,
+body .topbar a.btn, body .ctas a.btn, body .svc-cta, body .steps-cta-btn{font-size:18px !important;}
+@media (min-width:1281px){ body .menu a{font-size:18px !important;} }
+
+/* ===== Un solo tamaño para todos los textos pequeños: 20 px ===== */
+body .pc-loc, body .kicker, body section .kicker, body .head .kicker, body a.btn, body button.btn,
+body .topbar a.btn, body .ctas a.btn, body .svc-cta, body .steps-cta-btn, body .cap b, body .totop,
+body .logo-text, body .logo-text span{font-size:20px !important;}
+@media (min-width:1281px){ body .menu a{font-size:20px !important;} }
+@media (max-width:1280px){ body .menu a{font-size:17px !important;} }
+
+/* Encabezado: el menú, el logo y el botón del teléfono se quedan en 18 px para que entren en una sola línea */
+body .logo-text, body .logo-text span, body .topbar a.btn{font-size:18px !important;}
+@media (min-width:1281px){ body .menu a{font-size:18px !important;} }
+
+/* Celular: franja de lugares del hero en 2 columnas para que no se peguen las palabras */
+@media (max-width:900px){
+  body .hero-meta{grid-template-columns:repeat(2,1fr) !important;}
+  body .hero-meta div{font-size:17px !important; letter-spacing:.1em; padding:12px 0 !important;}
+}
+
+/* Celular: en datos de contacto y formulario el texto va un poco más chico para que no se corte */
+@media (max-width:600px){
+  body .phone-btn span{font-size:17px !important; letter-spacing:0;}
+  body .cinfo .ci-row, body .cinfo .ci-row a, body .cinfo .ci-row span{font-size:16px !important;}
+  body form.quote-form input, body form.quote-form select, body form.quote-form textarea, body form.quote-form option{font-size:17px !important;}
+}
+
+/* ---- Mismo borde dorado del formulario en todos los fondos con ese dorado ---- */
+body section.bone#projects, body section.bone#about, body #projects, body #about{border:1px solid #D9AE57;}
+body .cinfo .ci-row{border:1px solid #D9AE57; border-left:1px solid #D9AE57;}
+body #projects, body #about{border-radius:var(--r-card,24px);}
