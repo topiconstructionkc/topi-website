@@ -780,7 +780,7 @@ form.quote-form .btn{font-size:16px;}
 
 /* ===== Copy v2 de TOPI (5/10/2026) ===== */
 /* hero: 5 lugares */
-.hero-meta{grid-template-columns:repeat(5,1fr);}
+.hero-meta{grid-template-columns:repeat(4,1fr);}
 @media (max-width:600px){ .hero-meta{grid-template-columns:repeat(3,1fr);} .hero-meta div{padding:12px 0;} }
 /* services: listas, pasos, botón único y estadísticas debajo */
 .svc-steps{list-style:none; counter-reset:s; margin:0 0 6px; padding:0; display:flex; flex-direction:column; gap:10px;}
@@ -1205,3 +1205,377 @@ body .logo-text, body .logo-text span, body .topbar a.btn{font-size:18px !import
 body section.bone#projects, body section.bone#about, body #projects, body #about{border:1px solid #D9AE57;}
 body .cinfo .ci-row{border:1px solid #D9AE57; border-left:1px solid #D9AE57;}
 body #projects, body #about{border-radius:var(--r-card,24px);}
+
+/* ===== PRUEBA: Projects en azul + blancos con amarillo brillante ===== */
+:root{--yb:#F0B93F;}
+/* Projects navy */
+body section.bone#projects, body #projects{background:#1D3D6E !important; border:0 !important; background-image:none !important;}
+body #projects h2{color:#fff !important;}
+body #projects .kicker{color:var(--yb) !important;}
+body #projects .kicker::before{background:var(--yb) !important;}
+body #projects .proj-soon{background:rgba(255,255,255,.09) !important; border:1.5px dashed rgba(255,255,255,.4) !important;}
+body #projects .proj-soon .pc-soon, body #projects .proj-soon span{color:#fff !important;}
+/* About blanco */
+body section.bone#about, body #about{background:#fff !important; background-image:none !important; border:2px solid var(--yb) !important;}
+body #about h2{color:#1D3D6E !important;}
+body #about .kicker{color:#1D3D6E !important;}
+body #about p, body #about p:not(.pull){color:#1c2430 !important;}
+/* barras y detalles en amarillo brillante */
+body section h2::after{background:var(--yb) !important;}
+body .kicker::before{background:var(--yb) !important;}
+body .svc-card{border-top:6px solid var(--yb) !important;}
+body .svc-card li::before, body .svc-body li::before{background:var(--yb) !important;}
+body .kicker{color:#1D3D6E;}
+/* menu */
+body .topbar .menu a{color:#1D3D6E !important;}
+body .topbar .menu a:hover{color:#1D3D6E !important; box-shadow:inset 0 -3px 0 var(--yb);}
+/* proceso */
+body .step{background:#fff !important; border-top:4px solid var(--yb) !important;}
+/* formulario blanco con borde amarillo */
+body form.quote-form, body .quote-form{background:#fff !important; border:2px solid var(--yb) !important;}
+body .cinfo .ci-row{background:#fff !important; border:2px solid var(--yb) !important; color:#1c2430 !important;}
+body .cinfo .ci-row *{color:#1c2430 !important;}
+body form.quote-form input, body form.quote-form select, body form.quote-form textarea{border:1.5px solid var(--yb) !important; background:#fff !important;}
+body .process .kicker, body #process .kicker{color:#1D3D6E !important;}
+body .topbar .logo-text span{color:#1D3D6E !important;}
+
+/* ===== PRUEBA: hero con foto grande y capa azul ===== */
+body section.hero.hero-photo{position:relative; padding:0 !important; min-height:min(92vh,780px); display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden; background:#1D3D6E !important;}
+.hero-photo .hero-bg{position:absolute; inset:0; background:url(../img/hero-casa.jpg) center 62%/cover no-repeat;}
+.hero-photo .hero-bg::after{content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(29,61,110,.95) 0%,rgba(29,61,110,.84) 36%,rgba(29,61,110,.38) 66%,rgba(29,61,110,.08) 100%),linear-gradient(0deg,rgba(29,61,110,.9) 0,rgba(29,61,110,0) 30%);}
+.hero-photo .inner{position:relative; z-index:2; width:100%;}
+body .hero-photo .hero-body{display:block !important; padding:170px 0 64px !important;}
+.hero-photo .hero-body > div:first-child{max-width:640px;}
+.hero-photo .hero-body > div + div{max-width:520px; margin-top:24px;}
+.hero-photo h1{font-size:clamp(40px,5.6vw,72px) !important; max-width:12ch !important;}
+.hero-photo .hero-meta{background:rgba(29,61,110,.55); backdrop-filter:blur(4px); border-top:1px solid rgba(255,255,255,.28) !important; margin:0 -2px;}
+.hero-photo .hero-meta div{padding-left:4px;}
+@media (max-width:900px){
+  body section.hero.hero-photo{min-height:640px;}
+  body .hero-photo .hero-body{padding:120px 0 40px !important;}
+  .hero-photo .hero-bg{background-position:58% 55%;}
+  .hero-photo .hero-bg::after{background:linear-gradient(180deg,rgba(29,61,110,.88) 0%,rgba(29,61,110,.72) 55%,rgba(29,61,110,.9) 100%);}
+}
+@media (max-width:900px){
+  .hero-photo .hero-bg{background-position:60% 50%;}
+  .hero-photo .hero-bg::after{background:linear-gradient(180deg,rgba(29,61,110,.82) 0%,rgba(29,61,110,.55) 45%,rgba(29,61,110,.55) 70%,rgba(29,61,110,.9) 100%);}
+}
+/* mas foto visible */
+.hero-photo .hero-bg::after{background:linear-gradient(90deg,rgba(29,61,110,.92) 0%,rgba(29,61,110,.78) 28%,rgba(29,61,110,.45) 46%,rgba(29,61,110,.08) 64%,rgba(29,61,110,0) 100%),linear-gradient(0deg,rgba(29,61,110,.75) 0,rgba(29,61,110,0) 20%);}
+.hero-photo .hero-meta{background:rgba(29,61,110,.35);}
+.hero-photo h1, .hero-photo .sub, .hero-photo .kicker{text-shadow:0 2px 14px rgba(15,35,70,.55);}
+@media (max-width:900px){
+  .hero-photo .hero-bg::after{background:linear-gradient(180deg,rgba(29,61,110,.78) 0%,rgba(29,61,110,.4) 40%,rgba(29,61,110,.4) 72%,rgba(29,61,110,.82) 100%);}
+}
+/* azul mas suave */
+.hero-photo .hero-bg::after{background:linear-gradient(90deg,rgba(29,61,110,.72) 0%,rgba(29,61,110,.55) 26%,rgba(29,61,110,.22) 46%,rgba(29,61,110,0) 62%,rgba(29,61,110,0) 100%),linear-gradient(0deg,rgba(29,61,110,.55) 0,rgba(29,61,110,0) 18%);}
+.hero-photo .hero-meta{background:rgba(29,61,110,.22);}
+.hero-photo h1, .hero-photo .sub, .hero-photo .kicker{text-shadow:0 2px 16px rgba(15,35,70,.75), 0 1px 3px rgba(15,35,70,.5);}
+@media (max-width:900px){
+  .hero-photo .hero-bg::after{background:linear-gradient(180deg,rgba(29,61,110,.62) 0%,rgba(29,61,110,.3) 40%,rgba(29,61,110,.3) 72%,rgba(29,61,110,.65) 100%);}
+}
+
+/* ===== hero con fotos rotativas ===== */
+.hero-photo .hero-shot.hero-bg{position:absolute; inset:0; height:auto; border-radius:0; background:none;}
+.img-casa-hero{background-image:url('../img/hero-casa-2.jpg'); background-size:cover; background-position:center 90%;}
+.hero-photo .hero-shot .slide{background-size:cover; background-position:center;}
+.hero-photo .hero-bg::after{display:none !important; content:none !important;}
+.hero-photo .hero-veil{position:absolute; inset:0; z-index:1; pointer-events:none; background:linear-gradient(90deg,rgba(29,61,110,.72) 0%,rgba(29,61,110,.55) 26%,rgba(29,61,110,.22) 46%,rgba(29,61,110,0) 62%,rgba(29,61,110,0) 100%),linear-gradient(0deg,rgba(29,61,110,.55) 0,rgba(29,61,110,0) 18%);}
+.hero-photo .hero-dots{position:static; margin-top:30px; display:flex; gap:8px;}
+.hero-photo .hero-dots button{width:34px; height:4px; background:rgba(255,255,255,.45);}
+.hero-photo .hero-dots button.on{background:#F0B93F;}
+@media (max-width:900px){
+  .hero-photo .hero-veil{background:linear-gradient(180deg,rgba(29,61,110,.62) 0%,rgba(29,61,110,.3) 40%,rgba(29,61,110,.3) 72%,rgba(29,61,110,.65) 100%);}
+}
+@media (max-width:900px){ .img-casa-hero{background-position:50% 55%;} }
+.hero-photo .hero-shot .slide.img-casa-hero{background-position:center 88% !important;}
+@media (max-width:900px){ .hero-photo .hero-shot .slide.img-casa-hero{background-position:52% 70% !important;} }
+.img-bar-original{background-image:url('../img/bar-original.jpg');}
+.hero-photo .hero-shot .slide.img-bar-original{background-size:cover; background-position:center 22% !important;}
+@media (max-width:900px){ .hero-photo .hero-shot .slide.img-bar-original{background-position:32% 30% !important;} }
+
+
+/* casa: fondo completo, mas alto, encuadre puerta + techo + cielo */
+@media (min-width:901px){
+  body section.hero.hero-photo{min-height:min(96vh,880px);}
+  .hero-photo .hero-shot .slide.img-casa-hero{background-position:center 61% !important;}
+}
+
+/* ===== menu: barra blanca fija, a todo el ancho del hero ===== */
+body .topbar, body .topbar.small{background:rgba(255,255,255,.97) !important; border-bottom:1px solid rgba(29,61,110,.10) !important;}
+body .topbar .menu a{color:#1D3D6E !important;}
+
+/* ===== hero: texto mas arriba y jerarquia de tamaños ===== */
+body section.hero.hero-photo{display:flex; flex-direction:column;}
+.hero-photo .inner{flex:1; display:flex; flex-direction:column; justify-content:space-between;}
+body .hero-photo .hero-body{margin:auto 0; padding:0 0 70px !important;}
+.hero-photo .hero-body > div:first-child{max-width:720px !important;}
+.hero-photo .hero-body > div + div{max-width:560px !important; margin-top:26px;}
+body .hero-photo .kicker{font-size:17px !important; letter-spacing:.14em; margin-bottom:18px; white-space:normal;}
+body .hero-photo h1{font-size:clamp(46px,5.9vw,84px) !important; line-height:1.02; max-width:11ch !important; margin-bottom:0;}
+body .hero-photo p.sub{font-size:20px !important; line-height:1.55; max-width:30em;}
+body .hero-photo .ctas{margin-top:26px;}
+body .hero-photo .hero-dots{margin-top:34px;}
+@media (min-width:901px){ body .hero-photo .hero-body{padding-bottom:110px !important;} }
+@media (max-width:900px){
+  body .hero-photo h1{font-size:clamp(40px,11vw,58px) !important;}
+  body .hero-photo .kicker{font-size:15px !important;}
+  body .hero-photo p.sub{font-size:18px !important;}
+  body .hero-photo .hero-body{margin:0; padding:96px 0 34px !important;}
+}
+body section.hero.hero-photo{min-height:min(calc(100vh - 74px),860px) !important;}
+@media (max-width:900px){ body section.hero.hero-photo{min-height:640px !important;} }
+body .hero-photo .kicker{display:inline-flex !important; align-items:center; background:rgba(29,61,110,.78); padding:9px 18px; border-radius:999px; text-shadow:none !important; color:#FFD98A !important; backdrop-filter:blur(3px);}
+body .hero-photo .kicker::before{display:none !important;}
+/* kicker sin burbuja */
+body .hero-photo .kicker{display:flex !important; background:none !important; padding:0 !important; border-radius:0 !important; backdrop-filter:none !important; color:#FFD98A !important; font-weight:800 !important; text-shadow:0 1px 3px rgba(10,25,55,.9), 0 2px 14px rgba(10,25,55,.85) !important; gap:12px;}
+body .hero-photo .kicker::before{display:block !important; content:""; width:34px; height:2px; background:#F0B93F; flex:none;}
+/* subtitulo mas grande */
+body .hero-photo p.sub{font-size:25px !important; line-height:1.5; max-width:27em !important; font-weight:500;}
+body .hero-photo .hero-body > div + div{max-width:640px !important;}
+@media (max-width:900px){ body .hero-photo p.sub{font-size:20px !important;} }
+/* casa: asegurar puerta + techo + cielo en pantallas de laptop */
+@media (min-width:901px){
+  body section.hero.hero-photo{min-height:max(min(calc(100vh - 74px),880px), min(58vw,880px)) !important;}
+  .hero-photo .hero-shot .slide.img-casa-hero{background-position:center 62% !important;}
+}
+/* prueba: casa con boceto */
+.img-casa-hero{background-image:url('../img/hero-casa-3.jpg');}
+@media (min-width:901px){ .hero-photo .hero-shot .slide.img-casa-hero{background-position:82% center !important;} }
+@media (max-width:900px){ .hero-photo .hero-shot .slide.img-casa-hero{background-position:78% center !important;} }
+/* zonas en dorado */
+body .hero-photo .hero-meta div{color:#FFD98A !important; font-weight:700; text-shadow:0 1px 8px rgba(10,25,55,.7);}
+/* franja de zonas: de lado a lado, texto dorado oscuro */
+body .hero-photo .hero-meta{position:relative; z-index:0; background:none !important; backdrop-filter:none !important; border-top:0 !important; margin:0 !important;}
+body .hero-photo .hero-meta::before{content:""; position:absolute; z-index:-1; top:0; bottom:0; left:-200vw; right:-200vw; background:rgba(255,255,255,.9); border-top:1px solid rgba(29,61,110,.15); backdrop-filter:blur(6px);}
+body .hero-photo .hero-meta div{color:#B07D22 !important; font-weight:800; text-shadow:none !important;}
+/* franja de zonas: azul de lado a lado + dorado oscuro de la paleta */
+body .hero-photo .hero-meta::before{background:rgba(29,61,110,.9) !important; border-top:1px solid rgba(255,255,255,.18) !important;}
+body .hero-photo .hero-meta div{color:#B07D22 !important; font-weight:800; text-shadow:none !important;}
+/* franja translucida (como antes) pero de lado a lado */
+body .hero-photo .hero-meta::before{background:rgba(29,61,110,.5) !important; backdrop-filter:blur(5px) !important; border-top:1px solid rgba(255,255,255,.28) !important;}
+/* zonas centradas + dorado oscuro en linea superior y carrusel */
+body .hero-photo .hero-meta{text-align:center;}
+body .hero-photo .hero-meta div{text-align:center !important; padding-left:0 !important; padding-right:0 !important;}
+body .hero-photo .kicker{color:#B07D22 !important; text-shadow:0 0 10px rgba(255,255,255,.35), 0 1px 2px rgba(10,25,55,.5) !important;}
+body .hero-photo .kicker::before{background:#B07D22 !important;}
+body .hero-photo .hero-dots button.on{background:#B07D22 !important;}
+/* kicker y carrusel: vuelven al tono dorado claro anterior (se lee mejor) */
+body .hero-photo .kicker{color:#fcda9c !important; text-shadow:0 2px 16px rgba(15,35,70,.75), 0 1px 3px rgba(15,35,70,.5) !important;}
+body .hero-photo .kicker::before{background:#fcda9c !important;}
+body .hero-photo .hero-dots button.on{background:#F0B93F !important;}
+/* texto ~1 cm mas arriba */
+@media (min-width:901px){ body .hero-photo .hero-body{padding-bottom:148px !important;} }
+@media (max-width:900px){ body .hero-photo .hero-body{padding-top:58px !important; padding-bottom:72px !important;} }
+/* logo del menu: como estaba (TOPI azul + CONSTRUCTION en dorado oscuro) */
+body .topbar .logo-text span{color:#B07D22 !important;}
+/* logo del menu: degradado dorado -> azul */
+body .topbar .logo-text{background:linear-gradient(90deg,#B07D22 0%,#B07D22 12%,#1D3D6E 88%,#1D3D6E 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent !important;}
+body .topbar .logo-text span{color:transparent !important; -webkit-text-fill-color:transparent;}
+/* logo del menu: TOPI amarillo + CONSTRUCTION azul (pedido de TOPI) */
+body .topbar .logo-text{background:none !important; -webkit-background-clip:border-box; background-clip:border-box; -webkit-text-fill-color:#F0B93F; color:#F0B93F !important; text-shadow:0 0 1px rgba(176,125,34,.55);}
+body .topbar .logo-text span{color:#1D3D6E !important; -webkit-text-fill-color:#1D3D6E; text-shadow:none;}
+/* hero: sin esquinas redondeadas (se veia el azul de fondo en las esquinas) */
+body .hero-photo .hero-shot .slide, body .hero-photo .hero-shot, body .hero-photo .hero-veil{border-radius:0 !important;}
+/* barra principal: letras mas juntas */
+body .topbar .menu a{letter-spacing:.03em !important;}
+body .topbar .logo-text{letter-spacing:.1em !important;}
+body .topbar a.btn{letter-spacing:.05em !important;}
+@media (max-width:560px){ body .topbar .logo-text{letter-spacing:.06em !important;} }
+/* barra: letras aun mas juntas */
+body .topbar .menu a{letter-spacing:.01em !important;}
+body .topbar .logo-text{letter-spacing:.06em !important;}
+body .topbar a.btn{letter-spacing:.02em !important;}
+@media (max-width:560px){ body .topbar .logo-text{letter-spacing:.03em !important;} }
+/* opcion A: zona mas azul detras del bloque de texto para que se lea "Licensed..." */
+.hero-photo .hero-veil{background:
+  radial-gradient(ellipse 62% 78% at 20% 36%, rgba(29,61,110,.86) 0%, rgba(29,61,110,.66) 45%, rgba(29,61,110,0) 100%),
+  linear-gradient(90deg,rgba(29,61,110,.72) 0%,rgba(29,61,110,.55) 26%,rgba(29,61,110,.22) 46%,rgba(29,61,110,0) 62%),
+  linear-gradient(0deg,rgba(29,61,110,.55) 0,rgba(29,61,110,0) 18%) !important;}
+body .hero-photo .kicker{text-shadow:0 1px 3px rgba(10,25,55,.9), 0 0 14px rgba(10,25,55,.7) !important;}
+/* letras mas grandes: linea "Licensed..." y barra principal */
+body .hero-photo .kicker{font-size:20px !important;}
+@media (max-width:900px){ body .hero-photo .kicker{font-size:16px !important;} }
+body .topbar .menu a, body .topbar .logo-text, body .topbar .logo-text span, body .topbar a.btn{font-size:19px !important;}
+@media (max-width:1280px){ body .topbar .menu a, body .topbar .logo-text, body .topbar .logo-text span, body .topbar a.btn{font-size:17px !important;} }
+@media (max-width:560px){ body .topbar .logo-text, body .topbar .logo-text span{font-size:15px !important;} }
+/* kicker: dorado un poco mas oscuro/vivo y tamano que entra en una linea */
+body .hero-photo .kicker{color:#F0B93F !important; font-size:18px !important;}
+body .hero-photo .kicker::before{background:#F0B93F !important;}
+@media (max-width:900px){ body .hero-photo .kicker{font-size:15px !important;} }
+/* zonas: letras en blanco solido */
+body .hero-photo .hero-meta div{color:#FFFFFF !important; text-shadow:none !important;}
+/* titulos dorados (kickers): mismo tamano y dorado oscuro en todo el sitio */
+body .kicker, body section .kicker, body .head .kicker, body #projects .kicker, body #about .kicker, body .process .kicker, body #process .kicker{font-size:21px !important; color:#B07D22 !important; letter-spacing:.14em; font-weight:800 !important;}
+body .kicker::before, body #projects .kicker::before, body #about .kicker::before, body .process .kicker::before, body .kicker::before{background:#B07D22 !important;}
+/* hero: mismo tamano, dorado vivo para que se lea sobre la foto azul */
+body .hero-photo .kicker{font-size:21px !important; color:#F0B93F !important;}
+body .hero-photo .kicker::before{background:#F0B93F !important;}
+.hero-photo .hero-body > div:first-child{max-width:860px !important;}
+@media (max-width:900px){ body .kicker, body section .kicker, body .head .kicker, body #projects .kicker, body #about .kicker, body .hero-photo .kicker{font-size:16px !important;} }
+
+/* ===== Hero final (2026-10-06): imagen oscura (hero-casa-4), velo en esquina, titular blanco, boton azul marino ===== */
+.img-casa-hero{background-image:url('../img/hero-casa-4.jpg');}
+@media (min-width:901px){ .hero-photo .hero-shot .slide.img-casa-hero{background-position:82% center !important;} }
+@media (max-width:900px){ .hero-photo .hero-shot .slide.img-casa-hero{background-position:78% center !important;} }
+/* franja de zonas: azul firme, sin destello blanco */
+body .hero-photo .hero-meta::before{background:rgba(29,61,110,.84) !important; backdrop-filter:none !important; -webkit-backdrop-filter:none !important; border-top:1px solid rgba(255,255,255,.22) !important;}
+/* velo azul: nace en la esquina superior izquierda y casi desaparece hacia abajo */
+.hero-photo .hero-veil{background:
+  radial-gradient(ellipse 62% 78% at 0% 0%, rgba(29,61,110,.86) 0%, rgba(29,61,110,.66) 30%, rgba(29,61,110,.30) 60%, rgba(29,61,110,0) 100%) !important;}
+@media (max-width:900px){ .hero-photo .hero-veil{background:
+  radial-gradient(ellipse 120% 70% at 0% 0%, rgba(29,61,110,.84) 0%, rgba(29,61,110,.58) 40%, rgba(29,61,110,0) 100%) !important;} }
+/* texto: solo titular + boton (subtitulo oculto), titular blanco sobre imagen oscura */
+body .hero-photo p.sub{display:none !important;}
+body .hero-photo .hero-body h1{margin-bottom:34px !important;}
+body .hero-photo h1{color:#FFFFFF !important; text-shadow:0 2px 14px rgba(10,25,55,.55) !important;}
+/* linea amarilla mas chica */
+body .hero-photo .kicker{font-size:15px !important; letter-spacing:.16em !important;}
+body .hero-photo .kicker::before{width:28px !important;}
+@media (max-width:900px){ body .hero-photo .kicker{font-size:11px !important; letter-spacing:.1em !important; white-space:nowrap;} body .hero-photo .kicker::before{width:18px !important;} }
+/* boton azul marino, letras blancas, sin borde */
+body .hero-photo .btn{background:#1D3D6E !important; color:#FFFFFF !important; border:0 !important; box-shadow:0 4px 14px rgba(10,25,55,.35) !important;}
+/* linea del carrusel: mismo ancho y borde izquierdo que el boton */
+body .hero-photo .hero-body > div:nth-child(2){width:max-content; max-width:100%;}
+body .hero-photo .hero-dots{width:100%; gap:6px;}
+body .hero-photo .hero-dots button{flex:1 1 0; width:auto !important; min-width:0;}
+
+/* ===== Servicios (7/10): tarjetas con foto, esquina amarilla (#F0B93F, el del hero), sin circulos. Misma tipografia, textos y paleta ===== */
+body .hero-photo .hero-dots{display:none !important;}
+body #services .svc-cards{display:grid !important; grid-template-columns:1fr 1fr !important; gap:34px !important; align-items:stretch;}
+body #services .svc-card{position:relative; display:flex !important; flex-direction:column; background:#fff !important; border:0 !important; border-radius:22px !important; overflow:visible !important; box-shadow:0 14px 38px rgba(29,61,110,.12) !important; transform:none; opacity:1 !important;}
+body #services .svc-card:hover{transform:none !important; box-shadow:0 18px 44px rgba(29,61,110,.18) !important; border:0 !important;}
+body #services .svc-card .photo{height:230px !important; border-radius:22px 22px 0 0 !important; transform:none !important;}
+body #services .svc-card:hover .photo{transform:none !important;}
+body #services .svc-card::before{display:none !important;}
+/* insignia circular entre la foto y el texto */
+body #services .svc-card::after{content:""; position:absolute; left:28px; top:200px; width:60px; height:60px; border-radius:50%; background-color:#F0B93F; border:4px solid #fff; background-repeat:no-repeat; background-position:center; background-size:28px 28px; box-shadow:0 6px 16px rgba(29,61,110,.25); z-index:3;}
+body #services .svc-card:nth-child(1)::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231D3D6E' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z'/%3E%3C/svg%3E");}
+body #services .svc-card:nth-child(2)::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231D3D6E' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 21l3-1 12-12-2-2L4 18z'/%3E%3Cpath d='M14 6l4 4'/%3E%3Cpath d='M3 21h18'/%3E%3C/svg%3E");}
+body #services .svc-card:nth-child(3)::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231D3D6E' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 11l9-7 9 7'/%3E%3Cpath d='M5 10v10h14V10'/%3E%3Cpath d='M10 20v-6h4v6'/%3E%3C/svg%3E");}
+body #services .svc-card .svc-body{padding:46px 30px 30px !important; flex:1;}
+body #services .svc-body h3{margin-bottom:14px;}
+body #services .svc-card:nth-child(1) .svc-body ul{display:grid; grid-template-columns:1fr 1fr; gap:6px 24px;}
+/* New Builds: tarjeta ancha, foto a la izquierda y texto a la derecha */
+body #services .svc-card:nth-child(3){grid-column:1 / -1; display:grid !important; grid-template-columns:.8fr 1.2fr;}
+body #services .svc-card:nth-child(3) .photo{height:auto !important; min-height:340px; border-radius:22px 0 0 22px !important;}
+body #services .svc-card:nth-child(3)::after{left:calc(40% - 30px); top:50%; margin-top:-30px;}
+body #services .svc-card:nth-child(3) .svc-body{padding:34px 34px 30px 56px !important; align-self:center;}
+/* boton y cifras */
+body #services .svc-cta{margin-top:38px;}
+body #services .stats{margin-top:46px !important; background:#F0B93F; border:0 !important; border-radius:22px; padding:34px 40px !important; gap:0;}
+body #services .stats div{padding:6px 28px !important; border-right:1px solid rgba(29,61,110,.25) !important;}
+body #services .stats div:first-child{padding-left:0 !important;}
+body #services .stats div:last-child{border-right:0 !important;}
+body #services .stats b{color:#1D3D6E !important;}
+body #services .stats span{color:#1D3D6E !important; opacity:.85;}
+@media (max-width:900px){
+  body #services .svc-cards{grid-template-columns:1fr !important; gap:40px !important;}
+  body #services .svc-card:nth-child(3){grid-column:auto; display:flex !important;}
+  body #services .svc-card:nth-child(3) .photo{height:230px !important; min-height:0; border-radius:22px 22px 0 0 !important;}
+  body #services .svc-card:nth-child(3)::after{left:28px; top:200px; margin-top:0;}
+  body #services .svc-card:nth-child(3) .svc-body{padding:46px 24px 26px !important;}
+  body #services .svc-card:nth-child(1) .svc-body ul{grid-template-columns:1fr 1fr; gap:6px 14px;}
+  body #services .stats{padding:22px 20px !important;}
+  body #services .stats div{padding:12px 0 !important; border-right:0 !important; border-bottom:1px solid rgba(29,61,110,.25);}
+  body #services .stats div:last-child{border-bottom:0;}
+}
+body #services .stats div{border-radius:0 !important;}
+@media (max-width:900px){ body #services .svc-card:nth-child(1) .svc-body ul{grid-template-columns:1fr !important;} }
+
+/* sin fondo amarillo abajo; boton amarillo */
+body #services .stats{background:transparent !important; border-radius:0 !important; padding:0 !important; margin-top:46px !important; border-top:1px solid rgba(29,61,110,.18) !important;}
+body #services .stats div{padding:28px 30px 0 !important; border-right:1px solid rgba(29,61,110,.18) !important;}
+body #services .stats div:first-child{padding-left:0 !important;}
+body #services .stats div:last-child{border-right:0 !important;}
+body #services .stats span{opacity:1; color:#4a5568 !important;}
+body #services .svc-cta .btn{background:#F0B93F !important; color:#1D3D6E !important;}
+@media (max-width:900px){ body #services .stats div{padding:14px 0 !important; border-right:0 !important; border-bottom:1px solid rgba(29,61,110,.18);} body #services .stats div:last-child{border-bottom:0 !important;} }
+body #services .svc-cta .btn{border:0 !important;}
+/* sin lineas amarillas: barra de progreso del scroll y subrayado del titulo de Servicios */
+.progress{display:none !important;}
+body #services h2::after{display:none !important;}
+
+/* nueva imagen New Builds: render panoramico (boceto -> obra), tarjeta ancha con foto arriba y texto abajo */
+body #services .svc-card:nth-child(3) .photo.img-exterior1{background-image:url('../img/new-build-render.jpg') !important; background-size:cover !important; background-position:center !important;}
+@media (min-width:901px){
+  body #services .svc-card:nth-child(3){display:flex !important; flex-direction:column; grid-template-columns:none;}
+  body #services .svc-card:nth-child(3) .photo{height:400px !important; min-height:0; border-radius:22px 22px 0 0 !important;}
+  body #services .svc-card:nth-child(3)::after{left:28px; top:370px; margin-top:0;}
+  body #services .svc-card:nth-child(3) .svc-body{padding:46px 40px 34px !important; align-self:stretch;}
+}
+@media (max-width:900px){ body #services .svc-card:nth-child(3) .photo.img-exterior1{background-position:35% center !important;} }
+
+/* Design Consulting: render del deck de noche (copy v2) */
+body #services .svc-card:nth-child(2) .photo{background-image:url('../img/design-consulting-deck.jpg') !important; background-size:cover !important; background-position:center 42% !important;}
+
+/* borde amarillo parcial: solo la esquina inferior derecha, siguiendo la curva de la tarjeta */
+body #services .svc-card::before{display:block !important; content:""; position:absolute; left:0; top:0; width:96px; height:96px; border-left:3px solid #F0B93F; border-top:3px solid #F0B93F; border-top-left-radius:22px; pointer-events:none; z-index:2; transition:width .35s ease, height .35s ease;}
+body #services .svc-card:hover::before{width:140px; height:140px;}
+@media (max-width:900px){ body #services .svc-card::before{width:72px; height:72px;} }
+
+
+/* sin circulos sobre las imagenes; amarillo = el del subtitulo del hero (#F0B93F) */
+body #services{--yb:#F0B93F;}
+body #services .svc-card::after{display:none !important;}
+body #services .svc-card .svc-body{padding:32px 30px 30px !important;}
+body #services .svc-card:nth-child(3) .svc-body{padding:34px 40px 34px !important;}
+@media (min-width:901px){ body #services .svc-card:nth-child(3) .svc-body{padding:36px 40px 34px !important;} }
+@media (max-width:900px){ body #services .svc-card .svc-body, body #services .svc-card:nth-child(3) .svc-body{padding:26px 24px 26px !important;} }
+
+/* numeros de los pasos: azul marino sobre el circulo amarillo */
+body #services .svc-steps li::before{color:#1D3D6E !important;}
+/* numeros de los pasos un poco mas grandes (circulo 28px, numero 14px), alineados con la linea de texto */
+body #services .svc-steps li::before{width:28px !important; height:28px !important; font-size:14px !important; top:1px !important; display:flex; align-items:center; justify-content:center; line-height:1;}
+body #services .svc-steps li{padding-left:42px !important;}
+
+/* ===== Quitar rayas (7/10): barra amarilla bajo los titulos y linea lateral de la cita ===== */
+body section h2::after, body #about h2::after, body #projects h2::after, body #services h2::after{display:none !important; content:none !important;}
+body .about blockquote.pull, body #about blockquote.pull{border-left:0 !important; padding-left:0 !important;}
+
+/* ===== Servicios: fotos mas largas hacia abajo, mas cerca del titulo ===== */
+@media (min-width:901px){
+  body #services .svc-card:nth-child(1) .photo, body #services .svc-card:nth-child(2) .photo{height:262px !important;}
+  body #services .svc-card:nth-child(3) .photo{height:440px !important; min-height:0 !important;}
+  body #services .svc-card .svc-body{padding-top:22px !important;}
+}
+@media (max-width:900px){
+  body #services .svc-card:nth-child(1) .photo, body #services .svc-card:nth-child(2) .photo{height:240px !important;}
+  body #services .svc-card:nth-child(3) .photo{height:250px !important;}
+  body #services .svc-card .svc-body{padding-top:20px !important;}
+}
+@media (min-width:901px){
+  body #services .svc-card:nth-child(1) .photo, body #services .svc-card:nth-child(2) .photo{height:272px !important;}
+  body #services .svc-card:nth-child(3) .photo{height:452px !important;}
+  body #services .svc-card .svc-body, body #services .svc-card:nth-child(3) .svc-body{padding-top:16px !important;}
+}
+@media (max-width:900px){ body #services .svc-card .svc-body, body #services .svc-card:nth-child(3) .svc-body{padding-top:16px !important;} }
+@media (min-width:901px){
+  body #services .svc-card:nth-child(1) .photo, body #services .svc-card:nth-child(2) .photo{height:282px !important;}
+  body #services .svc-card:nth-child(3) .photo{height:462px !important;}
+  body #services .svc-card .svc-body, body #services .svc-card:nth-child(3) .svc-body{padding-top:6px !important;}
+}
+@media (max-width:900px){ body #services .svc-card .svc-body, body #services .svc-card:nth-child(3) .svc-body{padding-top:8px !important;} }
+
+/* ===== Hero: "One Team / Multiple Solutions" en 2 lineas (escritorio) ===== */
+@media (min-width:901px){ body .hero-photo h1{white-space:nowrap; max-width:none !important;} body .hero-photo .hero-body > div:first-child{max-width:none !important; width:auto !important;} }
+
+/* ===== Projects: nuevo bano (Biersmith) en una tarjeta que estaba vacia ===== */
+.img-bath-biersmith-after{background-image:url('../img/bathroom-biersmith-after.jpg'); background-size:cover; background-position:center;}
+.img-bath-biersmith-before{background-image:url('../img/bathroom-biersmith-before.jpg'); background-size:cover; background-position:center;}
+/* Baño basement (7/10): antes al pasar el cursor */
+.img-bath-basement-before{background-image:url('../img/bathroom-basement-before.jpg'); background-size:cover; background-position:center;}
+.img-bath-basement-after{background-image:url('../img/bathroom-basement-after.jpg'); background-size:cover; background-position:center;}
+.img-bath-gray-after{background-image:url('../img/bathroom-gray-shower-after-v2.jpg'); background-size:cover; background-position:center;}
+.img-bath-gray-before{background-image:url('../img/bathroom-gray-shower-before.jpg'); background-size:cover; background-position:center;}
+/* Cocina blanca (7/10): foto enderezada + antes al pasar el cursor; encuadre con heladera y cocina */
+body #projects .proj-card img[src*="kitchen-white-v2"], body #projects .proj-card img[src*="kitchen-white-before"]{object-position:80% 50% !important;}
+/* Escalera (7/10): foto del despues mas completa */
+.img-stairs-after{background-image:url('../img/stairs-after-v2.jpg') !important;}
+/* Baño verde con arco (7/10): antes (estructura con el tanque) al pasar el cursor */
+.img-bath-green-after{background-image:url('../img/bathroom-green-after.jpg'); background-size:cover; background-position:center;}
+.img-bath-green-before{background-image:url('../img/bathroom-green-before.jpg'); background-size:cover; background-position:center;}
+/* Etiqueta temporal de revision (7/10): fotos del portfolio pendientes de edicion. Borrar al editarlas. */
+.proj-card .pc-flag{position:absolute; left:12px; bottom:12px; z-index:3; padding:6px 12px; border-radius:999px; background:#F0B93F; color:#1D3D6E; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; pointer-events:none;}
+/* Hero (7/10): portada 80px mas corta (se recorta abajo); el texto queda donde estaba, un poco mas arriba que antes (solo escritorio) */
+@media (min-width:901px){ body section.hero.hero-photo{min-height:calc(max(min(calc(100vh - 74px),880px), min(58vw,880px)) - 80px) !important;} body .hero-photo .hero-body{padding-bottom:212px !important;} }

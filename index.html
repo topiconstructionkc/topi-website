@@ -36,30 +36,31 @@
   </div>
 
   <!-- HERO -->
-  <section class="hero" id="top">
+  <section class="hero hero-photo" id="top">
+    <div class="hero-shot hero-bg" id="heroShot" role="img" aria-label="Remodeled homes and interiors by TOPI">
+      <div class="slide s1 on img-casa-hero"></div>
+      <div class="slide s5 img-living-fireplace"></div>
+      <div class="slide s3 img-bar-original"></div>
+    </div>
+    <div class="hero-veil"></div>
     <div class="inner">
       <div class="hero-body">
         <div>
-          <div class="kicker">Licensed General Contractor - Kansas &amp; Missouri</div>
-          <h1>Built Once. Built Right</h1>
+          <div class="kicker">Licensed &amp; Insured General Contractor</div>
+          <h1>One Team<br>Multiple Solutions</h1>
         </div>
         <div>
           <p class="sub">Dream it. We'll design it, permit it, and build it, side by side with you. A three-generation family company, led by an architectural designer.</p>
           <div class="ctas">
             <a href="#projects" class="btn">See our work</a>
           </div>
-        </div>
-      </div>
-      <div class="hero-shot" id="heroShot">
-        <div class="slide s3 on img-bar-finished"></div>
-        <div class="slide s4 img-deck-client2"></div>
-        <div class="slide s5 img-living-fireplace"></div>
-        <div class="hero-dots" id="heroDots">
-          <button class="on" aria-label="Photo 1"></button><button aria-label="Photo 2"></button><button aria-label="Photo 3"></button>
+          <div class="hero-dots" id="heroDots">
+            <button class="on" aria-label="Photo 1"></button><button aria-label="Photo 2"></button><button aria-label="Photo 3"></button>
+          </div>
         </div>
       </div>
       <div class="hero-meta">
-        <div>Kansas</div><div>Missouri</div><div>Miami</div><div>Caribbean</div><div>Panama</div>
+        <div>Kansas</div><div>Missouri</div><div>Miami</div><div>Caribbean</div>
       </div>
     </div>
   </section>
@@ -81,7 +82,7 @@
             <h3>Interior &amp; Exterior Remodeling</h3>
             <ul>
               <li>Kitchens</li><li>Bathrooms</li><li>Basements</li><li>Laundry rooms</li><li>Siding</li><li>Decks</li>
-              <li>Fences</li><li>Paint</li><li>Roofing &amp; gutters</li><li>Drywall &amp; flooring</li><li>Landscaping</li>
+              <li>Fences</li><li>Paint</li><li>Roofing &amp; gutters</li><li>Drywall &amp; flooring</li><li>Landscaping</li><li>Epoxy Floors</li>
             </ul>
           </div>
         </article>
@@ -138,7 +139,9 @@
       <div class="track" id="track">
         <div class="slide-card" aria-hidden="true" data-clone="1"><div class="photo img img-deck-patio"></div><div class="cap"><b>Deck & Patio</b><span>Kansas City</span></div></div>
         <div class="slide-card"><div class="photo img img-kitchen-remodel"></div><div class="cap"><b>Kitchen remodel</b><span>Kansas City</span></div></div>
-        <div class="slide-card"><div class="photo img img-bath-real"></div><div class="cap"><b>Bathroom remodel</b><span>Kansas City</span></div></div>
+        <div class="slide-card"><div class="photo img img-bath-green-after hover-swap"><div class="hover-layer img-bath-green-before"></div></div><div class="cap"><b>Bathroom remodel</b><span>Kansas City</span></div></div>
+        <div class="slide-card"><div class="photo img img-bath-biersmith-after hover-swap"><div class="hover-layer img-bath-biersmith-before"></div></div><div class="cap"><b>Bathroom remodel</b><span>Kansas City</span></div></div>
+        <div class="slide-card"><div class="photo img img-bath-gray-after hover-swap"><div class="hover-layer img-bath-gray-before"></div></div><div class="cap"><b>Bathroom remodel</b><span>Kansas City</span></div></div>
         <div class="slide-card"><div class="photo img img-stairs-after hover-swap"><div class="hover-layer img-stairs-before"></div></div><div class="cap"><b>Stair remodel</b><span>Kansas City</span></div></div>
         <div class="slide-card"><div class="photo img img-deck-patio"></div><div class="cap"><b>Deck & Patio</b><span>Kansas City</span></div></div>
         <div class="slide-card" aria-hidden="true" data-clone="1"><div class="photo img img-kitchen-remodel"></div><div class="cap"><b>Kitchen remodel</b><span>Kansas City</span></div></div>
@@ -148,15 +151,16 @@
 
       <!-- Vista de escritorio (>900px): 8 proyectos a la vista, sin scroll lateral.
            Al pasar el mouse se ve el "antes" (sin etiquetas). En celular se usa el carrusel de arriba.
-           TODO: lugares reales de cada proyecto (hoy "Kansas City") y fotos de las tarjetas "coming soon". -->
+           TODO: sacar las etiquetas "Pending edit" (clase pc-flag) cuando se editen esas 3 fotos; lugares reales de cada proyecto (hoy "Kansas City") y fotos de las tarjetas "coming soon". -->
       <div class="proj-grid reveal" id="projGrid">
         <figure class="proj-card" tabindex="0">
           <img class="pc-img pc-after" src="img/basement-after-v3.jpg" alt="Basement and bar remodel - after" loading="lazy">
           <img class="pc-img pc-before" src="img/interior-before.jpg" alt="Basement and bar remodel - before" loading="lazy">
           <span class="pc-loc">Kansas City</span>
+          <span class="pc-flag">Pending edit</span>
         </figure>
         <figure class="proj-card" tabindex="0">
-          <img class="pc-img pc-after" src="img/stairs-after.jpg" alt="Stair remodel - after" loading="lazy">
+          <img class="pc-img pc-after" src="img/stairs-after-v2.jpg" alt="Stair remodel - after" loading="lazy">
           <img class="pc-img pc-before" src="img/stairs-before.jpg" alt="Stair remodel - before" loading="lazy">
           <span class="pc-loc">Kansas City</span>
         </figure>
@@ -164,30 +168,36 @@
           <img class="pc-img pc-after" src="img/deck-after.jpg" alt="Deck remodel - after" loading="lazy">
           <img class="pc-img pc-before" src="img/deck-before.jpg" alt="Deck remodel - before" loading="lazy">
           <span class="pc-loc">Kansas City</span>
+          <span class="pc-flag">Pending edit</span>
         </figure>
         <figure class="proj-card" tabindex="0">
           <img class="pc-img pc-after" src="img/kitchen-remodel-finished.jpg" alt="Kitchen remodel - after" loading="lazy">
           
           <span class="pc-loc">Kansas City</span>
+          <span class="pc-flag">Pending edit</span>
           
         </figure>
         <figure class="proj-card" tabindex="0">
-          <img class="pc-img pc-after" src="img/kitchen-white.jpg" alt="White kitchen remodel - after" loading="lazy">
-          
+          <img class="pc-img pc-after" src="img/kitchen-white-v2.jpg" alt="White kitchen remodel - after" loading="lazy">
+          <img class="pc-img pc-before" src="img/kitchen-white-before.jpg" alt="White kitchen remodel - before" loading="lazy">
           <span class="pc-loc">Kansas City</span>
           
         </figure>
         <figure class="proj-card" tabindex="0">
-          <img class="pc-img pc-after" src="img/bathroom-remodel-client.jpg" alt="Bathroom remodel - after" loading="lazy">
-          
+          <img class="pc-img pc-after" src="img/bathroom-green-after.jpg" alt="Basement bathroom remodel - after" loading="lazy">
+          <img class="pc-img pc-before" src="img/bathroom-green-before.jpg" alt="Basement bathroom remodel - before" loading="lazy">
           <span class="pc-loc">Kansas City</span>
           
         </figure>
-        <figure class="proj-card proj-soon">
-          <span class="pc-soon">New project<br>photos coming soon</span>
+        <figure class="proj-card" tabindex="0">
+          <img class="pc-img pc-after" src="img/bathroom-gray-shower-after-v2.jpg" alt="Bathroom remodel - after" loading="lazy">
+          <img class="pc-img pc-before" src="img/bathroom-gray-shower-before.jpg" alt="Bathroom remodel - before" loading="lazy">
+          <span class="pc-loc">Kansas City</span>
         </figure>
-        <figure class="proj-card proj-soon">
-          <span class="pc-soon">New project<br>photos coming soon</span>
+        <figure class="proj-card" tabindex="0">
+          <img class="pc-img pc-after" src="img/bathroom-biersmith-after.jpg" alt="Bathroom remodel - after" loading="lazy">
+          <img class="pc-img pc-before" src="img/bathroom-biersmith-before.jpg" alt="Bathroom remodel - before" loading="lazy">
+          <span class="pc-loc">Kansas City</span>
         </figure>
       </div>
     </div>
