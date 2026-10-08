@@ -1602,3 +1602,86 @@ body #projects .slide-card .cap{flex-direction:column !important; align-items:fl
 body #projects .slide-card .cap b{color:#FFFFFF !important; font-size:18px !important;}
 body #projects .slide-card .cap span{color:#F0B93F !important; font-size:15px !important; font-weight:600;}
 body #projects #dots{display:none !important;} /* rayitas blancas de abajo del carrusel, fuera a pedido de Estefania (8/10) */
+
+/* ===== Hero movil (8/10): foto COMPLETA debajo del texto (sin recortar); escritorio no cambia ===== */
+@media (max-width:600px){
+  body section.hero.hero-photo{min-height:0 !important; display:flex; flex-direction:column; justify-content:flex-start !important; overflow:hidden;}
+  body .hero-photo .inner{display:contents !important;}
+  body .hero-photo .hero-veil{display:none !important;}
+  body .hero-photo .hero-body{order:1; padding:34px 20px 22px !important; width:100%; box-sizing:border-box;}
+  body .hero-photo .hero-shot.hero-bg{order:2; position:relative !important; inset:auto !important; width:100%; height:auto !important; aspect-ratio:16/9; background:#1D3D6E !important;}
+  body .hero-photo .hero-shot .slide{background-size:cover !important; background-position:center !important; background-repeat:no-repeat;}
+  body .hero-photo .hero-meta{order:3; width:100%; box-sizing:border-box;}
+}
+
+/* Hero movil: la foto vertical del bar se reemplaza por un recorte horizontal (misma foto, sin zapato) para que entre completa */
+@media (max-width:600px){ .hero-photo .hero-shot .slide.img-bar-original{background-image:url(../img/bar-original-movil.jpg) !important;} }
+
+/* ===== Servicios movil (8/10): menos espacio al final de las tarjetas e interlineado mas corto en las listas con vinetas ===== */
+@media (max-width:900px){
+  body #services .svc-card .svc-body{padding-bottom:16px !important;}
+  body #services .svc-card .svc-body ul{margin-bottom:0 !important; gap:4px !important;}
+  body #services .svc-card .svc-body ul li{line-height:1.3 !important;}
+}
+
+/* ===== Hero movil (8/10): el boton "See our work" va abajo de la franja de localidades y mas chico ===== */
+@media (max-width:600px){
+  body .hero-photo .hero-body{display:contents !important;}
+  body .hero-photo .hero-body > div:first-child{order:1; width:100%; box-sizing:border-box; padding:34px 20px 22px !important;}
+  body .hero-photo .hero-body > div:nth-child(2){order:4; width:100% !important; max-width:none !important; box-sizing:border-box; margin:0 !important; padding:18px 20px 26px !important;}
+  body .hero-photo .hero-body > div:nth-child(2) .btn{font-size:14px !important; letter-spacing:.1em !important; padding:13px 26px !important; min-height:0 !important;}
+  body .hero-photo .hero-body h1{margin-bottom:0 !important;}
+  body .hero-photo .hero-meta{margin:0 !important;}
+}
+
+/* ===== Hero movil (8/10): foto sola arriba (sin tinte ni degradado azul), texto debajo sobre fondo blanco ===== */
+@media (max-width:600px){
+  body section.hero.hero-photo{background:#FFFFFF !important;}
+  body .hero-photo .hero-shot.hero-bg{order:1 !important; background:#FFFFFF !important;}
+  body .hero-photo .hero-body > div:first-child{order:2 !important; padding:26px 20px 20px !important;}
+  body .hero-photo .hero-meta{order:3 !important; background:transparent !important; backdrop-filter:none !important; -webkit-backdrop-filter:none !important; border-top:1px solid rgba(29,61,110,.18) !important;}
+  body .hero-photo .hero-meta::before{background:transparent !important; border-top:0 !important;}
+  body .hero-photo .hero-meta div{color:#1D3D6E !important; text-shadow:none !important;}
+  body .hero-photo h1{color:#1D3D6E !important; text-shadow:none !important;}
+  body .hero-photo .kicker{color:#B07D22 !important; text-shadow:none !important;}
+  body .hero-photo .kicker::before{background:#B07D22 !important;}
+  body .hero-photo .hero-body > div:nth-child(2){order:4 !important; padding:16px 20px 28px !important;}
+}
+
+/* ===== Hero (8/10): foto del bar mas arriba para que se vea la barra y los bancos, no solo la pared ===== */
+@media (min-width:901px){ .hero-photo .hero-shot .slide.img-bar-original{background-position:center 40% !important;} }
+@media (min-width:601px) and (max-width:900px){ .hero-photo .hero-shot .slide.img-bar-original{background-position:center 48% !important;} }
+
+/* ===== Hero movil (8/10): letras sobre la foto como en la web, ciudades en una sola linea en movimiento constante, boton azul abajo ===== */
+.hero-meta .meta-track{display:contents;}
+.hero-meta .meta-dup{display:none;}
+@keyframes topiMeta{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@media (max-width:600px){
+  body .hero-photo .hero-shot.hero-bg{order:1 !important; height:430px !important; aspect-ratio:auto !important; background:#FFFFFF !important;}
+  body .hero-photo .hero-shot .slide{background-size:cover !important;}
+  body .hero-photo .hero-shot .slide.img-casa-hero{background-position:78% center !important;}
+  body .hero-photo .hero-shot .slide.img-bar-original{background-image:url(../img/bar-original-v2.jpg) !important; background-position:center 42% !important;}
+  body .hero-photo .hero-body > div:first-child{position:absolute !important; top:30px; left:0; right:0; z-index:3; padding:0 20px !important; order:0 !important;}
+  body .hero-photo h1{color:#FFFFFF !important; text-shadow:0 2px 14px rgba(10,25,55,.65), 0 1px 3px rgba(10,25,55,.6) !important;}
+  body .hero-photo .kicker{color:#F0B93F !important; text-shadow:0 1px 3px rgba(10,25,55,.9), 0 0 14px rgba(10,25,55,.7) !important;}
+  body .hero-photo .kicker::before{background:#F0B93F !important;}
+  body .hero-photo .hero-meta{order:2 !important; overflow:hidden; display:block !important; padding:0 !important; border-top:0 !important; background:#FFFFFF !important;}
+  body .hero-photo .hero-meta .meta-track{display:flex !important; width:max-content; animation:topiMeta 16s linear infinite; padding:14px 0;}
+  body .hero-photo .hero-meta .meta-dup{display:block !important;}
+  body .hero-photo .hero-meta div{flex:0 0 auto; padding:0 26px !important; white-space:nowrap; font-size:15px !important; letter-spacing:.14em !important; color:#1D3D6E !important; text-align:left;}
+  body .hero-photo .hero-body > div:nth-child(2){order:3 !important; padding:6px 20px 26px !important;}
+}
+
+/* ===== Hero movil (8/10): letras doradas de "Licensed..." mas grandes y seccion Servicios mas arriba ===== */
+@media (max-width:600px){
+  body .hero-photo .kicker{font-size:14px !important; letter-spacing:.08em !important; white-space:normal !important; text-wrap:balance; line-height:1.35; font-weight:800;}
+  body .hero-photo .kicker::before{width:22px !important; flex:none;}
+  body .hero-photo .hero-body > div:nth-child(2){padding:2px 20px 10px !important;}
+  body section#services{padding-top:16px !important;}
+}
+
+/* ===== Hero movil (8/10): degradado azul en la esquina superior izquierda de la foto (como en la web) ===== */
+@media (max-width:600px){
+  body .hero-photo .hero-veil{display:block !important; position:absolute !important; top:0 !important; left:0 !important; right:0 !important; bottom:auto !important; height:430px !important; z-index:2 !important; pointer-events:none;
+    background:radial-gradient(ellipse 135% 80% at 0% 0%, rgba(29,61,110,.92) 0%, rgba(29,61,110,.78) 34%, rgba(29,61,110,.4) 66%, rgba(29,61,110,0) 100%) !important;}
+}
