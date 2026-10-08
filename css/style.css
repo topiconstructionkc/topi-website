@@ -1579,3 +1579,17 @@ body #projects .proj-card img[src*="kitchen-white-v2"], body #projects .proj-car
 .proj-card .pc-flag{position:absolute; left:12px; bottom:12px; z-index:3; padding:6px 12px; border-radius:999px; background:#F0B93F; color:#1D3D6E; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; pointer-events:none;}
 /* Hero (7/10): portada 80px mas corta (se recorta abajo); el texto queda donde estaba, un poco mas arriba que antes (solo escritorio) */
 @media (min-width:901px){ body section.hero.hero-photo{min-height:calc(max(min(calc(100vh - 74px),880px), min(58vw,880px)) - 80px) !important;} body .hero-photo .hero-body{padding-bottom:212px !important;} }
+
+/* ===== Hero (8/10): bloque mas corto; texto y localidades (Kansas/Missouri/Miami/Caribbean) mas arriba ===== */
+@media (min-width:901px){ body section.hero.hero-photo{min-height:calc(max(min(calc(100vh - 74px),880px), min(58vw,880px)) - 170px) !important;} body .hero-photo .hero-body{padding-bottom:147px !important; position:relative; top:-18px;} }
+
+/* ===== Contacto (8/10): correo con el mismo diseno que los botones de telefono ===== */
+
+/* ===== Hero movil (8/10): bloque mas bajo y foto menos ampliada; solo celular (escritorio no cambia) ===== */
+@media (max-width:900px){
+  body section.hero.hero-photo{min-height:470px !important;}
+  body .hero-photo .hero-body{padding-top:40px !important; padding-bottom:36px !important;}
+}
+
+/* Contacto: en celulares muy angostos el correo baja 1 px para no tocar el borde */
+@media (max-width:375px){ body .phone-btn.mail-btn span{font-size:16px !important; letter-spacing:0 !important;} }
