@@ -1705,3 +1705,10 @@ body .process .steps4 .step.on .sq, body .process .steps4 .step.on .sq::before{c
 
 /* Boton "Book your consultation": texto centrado (8/10) */
 body #services .svc-cta .btn{display:flex !important; align-items:center; justify-content:center; text-align:center !important;}
+
+/* Botones de contacto (2 telefonos + correo): azul; al pasar el mouse, salmon de la paleta TOPI #FCDA9C con texto e iconos azules (8/10) */
+body .phone-btns .phone-btn, body .phone-btn.mail-btn{background:#1D3D6E !important; color:#FFFFFF !important; transition:background .2s ease, color .2s ease, transform .2s ease;}
+body .phone-btns .phone-btn span, body .phone-btn.mail-btn span{color:inherit !important;}
+body .phone-btns .phone-btn svg{color:#FFFFFF !important;}
+body .phone-btns .phone-btn:hover, body .phone-btn.mail-btn:hover, body .phone-btns .phone-btn:focus-visible{background:#FCDA9C !important; color:#1D3D6E !important;}
+body .phone-btns .phone-btn:hover svg, body .phone-btns .phone-btn:focus-visible svg{color:#1D3D6E !important;}
