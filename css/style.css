@@ -1593,3 +1593,12 @@ body #projects .proj-card img[src*="kitchen-white-v2"], body #projects .proj-car
 
 /* Contacto: en celulares muy angostos el correo baja 1 px para no tocar el borde */
 @media (max-width:375px){ body .phone-btn.mail-btn span{font-size:16px !important; letter-spacing:0 !important;} }
+
+/* ===== Hero (8/10): foto del bar sin el zapato de la persona (copia recortada, el original no se toca) ===== */
+.hero-photo .hero-shot .slide.img-bar-original{background-image:url(../img/bar-original-v2.jpg) !important;}
+
+/* ===== Projects movil (8/10): leyendas del carrusel legibles sobre el azul (titulo blanco, ciudad dorada, una debajo de la otra) ===== */
+body #projects .slide-card .cap{flex-direction:column !important; align-items:flex-start !important; justify-content:flex-start !important; gap:4px !important;}
+body #projects .slide-card .cap b{color:#FFFFFF !important; font-size:18px !important;}
+body #projects .slide-card .cap span{color:#F0B93F !important; font-size:15px !important; font-weight:600;}
+body #projects #dots{display:none !important;} /* rayitas blancas de abajo del carrusel, fuera a pedido de Estefania (8/10) */
