@@ -8,9 +8,9 @@
 :root{
     --chrome-bg:#eceae4; --chrome-ink:#4a5360; --chrome-border:#d8d4ca;
     --navy:#1D3D6E;
-    --gold:#fcda9c;
-    --gold-ink:#8a6a1e;
-    --gold-deep:#2f240a;
+    --gold:#B07D22;
+    --gold-ink:#B07D22;
+    --gold-deep:#1D3D6E;
     --bone:#f6f4ef;
     --bone-2:#efece4;
     --surface:#ffffff;
@@ -515,7 +515,7 @@
 .js .process .steps-cta.in .text-link::after{transform:scaleX(1);}
 .process .steps-cta .text-link .arr{display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:50%; background:var(--gold); color:var(--navy); font-size:16px; font-weight:800; animation:none;}
 .js .process .steps-cta.in .text-link .arr{animation:arrPulse 2.4s ease-out 1.5s infinite;}
-@keyframes arrPulse{0%{box-shadow:0 0 0 0 rgba(252,218,156,.6); transform:translateX(0);} 40%{transform:translateX(5px);} 70%{box-shadow:0 0 0 14px rgba(252,218,156,0); transform:translateX(0);} 100%{box-shadow:0 0 0 0 rgba(252,218,156,0);}}
+@keyframes arrPulse{0%{box-shadow:0 0 0 0 rgba(176,125,34,.6); transform:translateX(0);} 40%{transform:translateX(5px);} 70%{box-shadow:0 0 0 14px rgba(176,125,34,0); transform:translateX(0);} 100%{box-shadow:0 0 0 0 rgba(176,125,34,0);}}
 .process .steps-cta .text-link:hover, .process .steps-cta .text-link:focus-visible{background:var(--gold); color:var(--navy); box-shadow:0 12px 30px rgba(0,0,0,.3);}
 .process .steps-cta .text-link:hover::after, .process .steps-cta .text-link:focus-visible::after{transform:scaleX(0);}
 .process .steps-cta .text-link:hover .arr, .process .steps-cta .text-link:focus-visible .arr{background:var(--navy); color:var(--gold); transform:translateX(3px); animation:none; box-shadow:none;}
@@ -543,7 +543,7 @@
 }
 
 /* Gold lettering: larger and consistent everywhere (kickers, labels, buttons) */
-:root{--gold-ink:#7a5a14; --label-size:14px;}
+:root{--gold-ink:#B07D22; --label-size:14px;}
 .kicker{font-size:var(--label-size); letter-spacing:.16em; font-weight:700; gap:12px;}
 .kicker::before{width:34px; height:2px;}
 .about h3{font-size:var(--label-size); letter-spacing:.16em; font-weight:700; text-transform:uppercase;}
@@ -634,7 +634,7 @@ html{scroll-padding-top:84px;}
 .process .steps-cta .text-link:focus-visible{outline:3px solid var(--navy);}
 
 /* Section labels (kickers) stay gold everywhere: deeper gold on light sections (legible), palette gold on navy */
-:root{--gold-deep:#b07d22;}
+:root{--gold-deep:#B07D22;}
 .kicker, .process .kicker{color:var(--gold-deep);}
 .kicker::before{background:var(--gold-deep);}
 .hero .kicker{color:var(--gold);}
@@ -948,7 +948,7 @@ footer.site-footer{background:#F3F6FB; border-radius:32px 32px 0 0;}
 }
 .process .steps4 .step .sq::before{content:counter(paso); font:800 14px "Montserrat",sans-serif;}
 .process .steps4 .step.on .sq{background:var(--navy); border-color:var(--navy); color:var(--gold); transform:scale(1.12); animation:stepPulse 1.2s ease-out 1;}
-@keyframes stepPulse{0%{box-shadow:0 0 0 0 rgba(252,218,156,.9);}100%{box-shadow:0 0 0 16px rgba(252,218,156,0);}}
+@keyframes stepPulse{0%{box-shadow:0 0 0 0 rgba(176,125,34,.9);}100%{box-shadow:0 0 0 16px rgba(176,125,34,0);}}
 
 /* Escritorio ancho: la línea corre por encima de las tarjetas y los números quedan sobre ella */
 @media (min-width:1081px){
@@ -962,10 +962,10 @@ footer.site-footer{background:#F3F6FB; border-radius:32px 32px 0 0;}
   .process .steps4 .step .sq{animation:none;}
 }
 
-/* ---- Formulario: campos en el amarillo de la paleta (--gold #fcda9c), antes azul clarito ---- */
-form.quote-form input, form.quote-form select, form.quote-form textarea{background:var(--gold); border-color:#E8BE72;}
+/* ---- Formulario: campos en el amarillo de la paleta (--gold #B07D22), antes azul clarito ---- */
+form.quote-form input, form.quote-form select, form.quote-form textarea{background:var(--gold); border-color:#B07D22;}
 form.quote-form input:focus, form.quote-form select:focus, form.quote-form textarea:focus{background:var(--gold); border-color:var(--navy);}
-form.quote-form input::placeholder, form.quote-form textarea::placeholder{color:#6b5a30;}
+form.quote-form input::placeholder, form.quote-form textarea::placeholder{color:#1D3D6E;}
 
 /* ---- Letras pequeñas más grandes en toda la web (pedido de TOPI) ---- */
 .hero-meta div, .pc-loc{font-size:14px;}
@@ -983,15 +983,15 @@ form.quote-form input::placeholder, form.quote-form textarea::placeholder{color:
 .logo-text, .logo-text span{font-size:16px;}
 form.quote-form input, form.quote-form select, form.quote-form textarea, form.quote-form option{font-size:17px;}
 
-/* ---- Más amarillo de la paleta (#fcda9c) ---- */
-#about{background:#FFF3DB;}
+/* ---- Más amarillo de la paleta (#B07D22) ---- */
+#about{background:#FFFFFF;}
 .stats div, #services .stats div{background:var(--gold);}
 .stats b, .stats strong, .stats div > :first-child{color:var(--navy);}
 .stats span{color:var(--gold-deep);}
 .cinfo .ci-row{background:var(--gold); border-left-color:var(--navy);}
 .cinfo .ci-row, .cinfo .ci-row a{color:var(--gold-deep);}
 .svc-card{border-top:6px solid var(--gold);}
-.process .steps4 .step{background:#FFF3DB; border-color:#F1D79F;}
+.process .steps4 .step{background:#FFFFFF; border-color:#B07D22;}
 .process .steps4 .step.on{background:#fff;}
 section h2::after{content:""; display:block; width:64px; height:5px; border-radius:3px; background:var(--gold); margin-top:14px;}
 form.quote-form .note, form.quote-form p.note{font-size:18px; line-height:1.4;}
@@ -1015,13 +1015,13 @@ body .form-msg{font-size:17px;}
 body section .kicker, body .head .kicker{font-size:16px !important;}
 body .svc-card p.svc-body, body p.svc-body{font-size:16.5px !important;}
 body form.quote-form .note, body form.quote-form p.note, body .quote-form .note{font-size:18px !important;}
-body .cinfo .ci-row, body .cinfo .ci-row *{color:#2f240a;}
+body .cinfo .ci-row, body .cinfo .ci-row *{color:#1D3D6E;}
 body .svc-body p{font-size:16.5px !important; line-height:1.6;}
 
 /* ---- Sin el azul clarito de fondo: Projects y pie en el amarillo suave de la paleta ---- */
-body section.bone#projects, body #projects{background:#FFF3DB;}
-body footer.site-footer{background:#FFF3DB;}
-body .proj-soon{background:var(--gold); border:1.5px dashed #C99A3E;}
+body section.bone#projects, body #projects{background:#FFFFFF;}
+body footer.site-footer{background:#FFFFFF;}
+body .proj-soon{background:var(--gold); border:1.5px dashed #B07D22;}
 body .proj-soon .pc-soon, body .proj-soon span{color:var(--gold-deep);}
 
 /* ---- Estadísticas: sin fondo (como estaban) ---- */
@@ -1047,29 +1047,29 @@ body .topbar .menu a:hover{color:var(--navy);}
 /* ---- Invertido: fondos en el dorado de las letras "Portfolio" (#B07D22) y esas letras en el tono suave ---- */
 body #projects, body #about, body footer.site-footer{background:#B07D22;}
 body #projects h2, body #about h2{color:#fff;}
-body #projects .kicker, body #about .kicker{color:#FFF3DB;}
-body #projects .kicker::before, body #about .kicker::before{background:#FFF3DB;}
+body #projects .kicker, body #about .kicker{color:#FFFFFF;}
+body #projects .kicker::before, body #about .kicker::before{background:#FFFFFF;}
 body #about p:not(.pull), body #about .pull{color:#fff;}
-body #about blockquote.pull{border-left-color:#FFF3DB;}
-body #projects .cap b{color:#fff;} body #projects .cap span{color:#FFF3DB;}
+body #about blockquote.pull{border-left-color:#FFFFFF;}
+body #projects .cap b{color:#fff;} body #projects .cap span{color:#FFFFFF;}
 body footer.site-footer .foot-rights{color:#fff; border-top-color:rgba(255,255,255,.35);}
 body footer.site-footer .social-link{background:var(--navy); color:#fff;}
 body section.bone#projects, body section.bone#about{background:#B07D22;}
 
 /* ---- Contacto: campos y datos en el dorado (#B07D22), textos en el tono suave ---- */
-body form.quote-form input, body form.quote-form select, body form.quote-form textarea{background:#B07D22; border-color:#8E6213; color:#fff;}
+body form.quote-form input, body form.quote-form select, body form.quote-form textarea{background:#B07D22; border-color:#B07D22; color:#fff;}
 body form.quote-form input:focus, body form.quote-form select:focus, body form.quote-form textarea:focus{background:#B07D22; border-color:var(--navy);}
-body form.quote-form input::placeholder, body form.quote-form textarea::placeholder{color:#FFF3DB; opacity:1;}
-body form.quote-form select{color:#FFF3DB;}
+body form.quote-form input::placeholder, body form.quote-form textarea::placeholder{color:#FFFFFF; opacity:1;}
+body form.quote-form select{color:#FFFFFF;}
 body form.quote-form select option{background:#fff; color:#1b2230;}
 body .cinfo .ci-row, body .cinfo .ci-row *{color:#fff;}
-body .cinfo .ci-row{background:#B07D22; border-left-color:#FFF3DB;}
-body .cinfo .ci-row svg{color:#FFF3DB;}
+body .cinfo .ci-row{background:#B07D22; border-left-color:#FFFFFF;}
+body .cinfo .ci-row svg{color:#FFFFFF;}
 
 /* ---- Formulario: el marco (tarjeta) en dorado y los campos por dentro en blanco ---- */
-body form.quote-form{background:#B07D22; border-color:#8E6213;}
+body form.quote-form{background:#B07D22; border-color:#B07D22;}
 body form.quote-form h3{color:#fff;}
-body form.quote-form .note, body form.quote-form p.note{color:#FFF3DB !important;}
+body form.quote-form .note, body form.quote-form p.note{color:#FFFFFF !important;}
 body form.quote-form input, body form.quote-form select, body form.quote-form textarea{background:#fff; border-color:#E6DCC4; color:var(--ink);}
 body form.quote-form input:focus, body form.quote-form select:focus, body form.quote-form textarea:focus{background:#fff; border-color:var(--navy);}
 body form.quote-form input::placeholder, body form.quote-form textarea::placeholder{color:#7a8496; opacity:1;}
@@ -1083,14 +1083,14 @@ body form.quote-form .note, body form.quote-form p.note{color:var(--gold-deep) !
 body .form-msg{color:var(--navy);}
 body .cinfo .ci-row{background:linear-gradient(160deg, rgba(176,125,34,.34) 0%, rgba(176,125,34,.16) 100%); border-left-color:#B07D22;}
 body .cinfo .ci-row, body .cinfo .ci-row *{color:var(--gold-deep);}
-body .cinfo .ci-row svg{color:#8a6a1e;}
-body form.quote-form .note, body form.quote-form p.note{color:#3a2a08 !important;}
-body .cinfo .ci-row, body .cinfo .ci-row *{color:#3a2a08;}
-body .cinfo .ci-row svg{color:#8a6a1e;}
+body .cinfo .ci-row svg{color:#B07D22;}
+body form.quote-form .note, body form.quote-form p.note{color:#1D3D6E !important;}
+body .cinfo .ci-row, body .cinfo .ci-row *{color:#1D3D6E;}
+body .cinfo .ci-row svg{color:#B07D22;}
 
 /* ---- Dorado más claro, mismo tono que el #B07D22 pero con su color vivo (sin grisarse) ---- */
-body form.quote-form{background:linear-gradient(160deg, #E6BE72 0%, #F6E3B8 100%); border-color:#D9AE57;}
-body .cinfo .ci-row{background:linear-gradient(160deg, #E6BE72 0%, #F6E3B8 100%);}
+body form.quote-form{background:linear-gradient(160deg, #B07D22 0%, #FFFFFF 100%); border-color:#B07D22;}
+body .cinfo .ci-row{background:linear-gradient(160deg, #B07D22 0%, #FFFFFF 100%);}
 
 /* ---- Pie de página con fondo blanco ---- */
 body footer.site-footer{background:#fff; border-top:1px solid rgba(29,61,110,.12);}
@@ -1098,17 +1098,17 @@ body footer.site-footer .foot-rights{color:var(--ink-soft); border-top-color:rgb
 body footer.site-footer .social-link{background:var(--navy); color:#fff;}
 
 /* ---- Projects y About: dorado claro en degradado (como el formulario), textos otra vez oscuros ---- */
-body section.bone#projects, body section.bone#about, body #projects, body #about{background:linear-gradient(160deg, #E6BE72 0%, #F6E3B8 100%);}
+body section.bone#projects, body section.bone#about, body #projects, body #about{background:linear-gradient(160deg, #B07D22 0%, #FFFFFF 100%);}
 body #projects h2, body #about h2{color:var(--navy);}
-body #projects .kicker, body #about .kicker{color:#8a5f12;}
-body #projects .kicker::before, body #about .kicker::before{background:#8a5f12;}
-body #about p:not(.pull){color:#2b2208;}
+body #projects .kicker, body #about .kicker{color:#B07D22;}
+body #projects .kicker::before, body #about .kicker::before{background:#B07D22;}
+body #about p:not(.pull){color:#1C2430;}
 body #about .pull, body #about blockquote.pull{color:var(--navy);}
-body #about blockquote.pull{border-left-color:#8a5f12;}
-body #projects .cap b{color:var(--navy);} body #projects .cap span{color:#3a2a08;}
-body #projects h2::after, body #about h2::after{background:#8a5f12;}
+body #about blockquote.pull{border-left-color:#B07D22;}
+body #projects .cap b{color:var(--navy);} body #projects .cap span{color:#1D3D6E;}
+body #projects h2::after, body #about h2::after{background:#B07D22;}
 body .proj-soon{background:rgba(255,255,255,.55); border:1.5px dashed #B07D22;}
-body .proj-soon .pc-soon, body .proj-soon span{color:#3a2a08;}
+body .proj-soon .pc-soon, body .proj-soon span{color:#1D3D6E;}
 
 /* ---- About: párrafos a 14 pt (≈18,7 px) ---- */
 body .about p:not(.pull), body #about p:not(.pull){font-size:15pt !important; line-height:1.75;}
@@ -1164,7 +1164,7 @@ body .totop{font-size:18px;}
 @media (max-width:1280px){ body .menu a{font-size:16px !important;} }
 
 /* ---- Projects y About: el mismo degradado que el formulario (recorrido fijo, así se ven iguales aunque la sección sea más grande) ---- */
-body section.bone#projects, body section.bone#about, body #projects, body #about{background:linear-gradient(160deg, #E6BE72 0, #F6E3B8 760px, #F6E3B8 100%);}
+body section.bone#projects, body section.bone#about, body #projects, body #about{background:linear-gradient(160deg, #B07D22 0, #FFFFFF 760px, #FFFFFF 100%);}
 body p.lede, body .contact p.lede, body #contact p.lede{color:#1c2430 !important;}
 
 /* ===== Textos pequeños al tamaño más grande usado (20 px); en mayúsculas con espaciado, 18 px ===== */
@@ -1202,12 +1202,12 @@ body .logo-text, body .logo-text span, body .topbar a.btn{font-size:18px !import
 }
 
 /* ---- Mismo borde dorado del formulario en todos los fondos con ese dorado ---- */
-body section.bone#projects, body section.bone#about, body #projects, body #about{border:1px solid #D9AE57;}
-body .cinfo .ci-row{border:1px solid #D9AE57; border-left:1px solid #D9AE57;}
+body section.bone#projects, body section.bone#about, body #projects, body #about{border:1px solid #B07D22;}
+body .cinfo .ci-row{border:1px solid #B07D22; border-left:1px solid #B07D22;}
 body #projects, body #about{border-radius:var(--r-card,24px);}
 
 /* ===== PRUEBA: Projects en azul + blancos con amarillo brillante ===== */
-:root{--yb:#F0B93F;}
+:root{--yb:#B07D22;}
 /* Projects navy */
 body section.bone#projects, body #projects{background:#1D3D6E !important; border:0 !important; background-image:none !important;}
 body #projects h2{color:#fff !important;}
@@ -1283,7 +1283,7 @@ body .hero-photo .hero-body{display:block !important; padding:170px 0 64px !impo
 .hero-photo .hero-veil{position:absolute; inset:0; z-index:1; pointer-events:none; background:linear-gradient(90deg,rgba(29,61,110,.72) 0%,rgba(29,61,110,.55) 26%,rgba(29,61,110,.22) 46%,rgba(29,61,110,0) 62%,rgba(29,61,110,0) 100%),linear-gradient(0deg,rgba(29,61,110,.55) 0,rgba(29,61,110,0) 18%);}
 .hero-photo .hero-dots{position:static; margin-top:30px; display:flex; gap:8px;}
 .hero-photo .hero-dots button{width:34px; height:4px; background:rgba(255,255,255,.45);}
-.hero-photo .hero-dots button.on{background:#F0B93F;}
+.hero-photo .hero-dots button.on{background:#B07D22;}
 @media (max-width:900px){
   .hero-photo .hero-veil{background:linear-gradient(180deg,rgba(29,61,110,.62) 0%,rgba(29,61,110,.3) 40%,rgba(29,61,110,.3) 72%,rgba(29,61,110,.65) 100%);}
 }
@@ -1325,11 +1325,11 @@ body .hero-photo .hero-dots{margin-top:34px;}
 }
 body section.hero.hero-photo{min-height:min(calc(100vh - 74px),860px) !important;}
 @media (max-width:900px){ body section.hero.hero-photo{min-height:640px !important;} }
-body .hero-photo .kicker{display:inline-flex !important; align-items:center; background:rgba(29,61,110,.78); padding:9px 18px; border-radius:999px; text-shadow:none !important; color:#FFD98A !important; backdrop-filter:blur(3px);}
+body .hero-photo .kicker{display:inline-flex !important; align-items:center; background:rgba(29,61,110,.78); padding:9px 18px; border-radius:999px; text-shadow:none !important; color:#B07D22 !important; backdrop-filter:blur(3px);}
 body .hero-photo .kicker::before{display:none !important;}
 /* kicker sin burbuja */
-body .hero-photo .kicker{display:flex !important; background:none !important; padding:0 !important; border-radius:0 !important; backdrop-filter:none !important; color:#FFD98A !important; font-weight:800 !important; text-shadow:0 1px 3px rgba(10,25,55,.9), 0 2px 14px rgba(10,25,55,.85) !important; gap:12px;}
-body .hero-photo .kicker::before{display:block !important; content:""; width:34px; height:2px; background:#F0B93F; flex:none;}
+body .hero-photo .kicker{display:flex !important; background:none !important; padding:0 !important; border-radius:0 !important; backdrop-filter:none !important; color:#B07D22 !important; font-weight:800 !important; text-shadow:0 1px 3px rgba(10,25,55,.9), 0 2px 14px rgba(10,25,55,.85) !important; gap:12px;}
+body .hero-photo .kicker::before{display:block !important; content:""; width:34px; height:2px; background:#B07D22; flex:none;}
 /* subtitulo mas grande */
 body .hero-photo p.sub{font-size:25px !important; line-height:1.5; max-width:27em !important; font-weight:500;}
 body .hero-photo .hero-body > div + div{max-width:640px !important;}
@@ -1344,7 +1344,7 @@ body .hero-photo .hero-body > div + div{max-width:640px !important;}
 @media (min-width:901px){ .hero-photo .hero-shot .slide.img-casa-hero{background-position:82% center !important;} }
 @media (max-width:900px){ .hero-photo .hero-shot .slide.img-casa-hero{background-position:78% center !important;} }
 /* zonas en dorado */
-body .hero-photo .hero-meta div{color:#FFD98A !important; font-weight:700; text-shadow:0 1px 8px rgba(10,25,55,.7);}
+body .hero-photo .hero-meta div{color:#B07D22 !important; font-weight:700; text-shadow:0 1px 8px rgba(10,25,55,.7);}
 /* franja de zonas: de lado a lado, texto dorado oscuro */
 body .hero-photo .hero-meta{position:relative; z-index:0; background:none !important; backdrop-filter:none !important; border-top:0 !important; margin:0 !important;}
 body .hero-photo .hero-meta::before{content:""; position:absolute; z-index:-1; top:0; bottom:0; left:-200vw; right:-200vw; background:rgba(255,255,255,.9); border-top:1px solid rgba(29,61,110,.15); backdrop-filter:blur(6px);}
@@ -1361,9 +1361,9 @@ body .hero-photo .kicker{color:#B07D22 !important; text-shadow:0 0 10px rgba(255
 body .hero-photo .kicker::before{background:#B07D22 !important;}
 body .hero-photo .hero-dots button.on{background:#B07D22 !important;}
 /* kicker y carrusel: vuelven al tono dorado claro anterior (se lee mejor) */
-body .hero-photo .kicker{color:#fcda9c !important; text-shadow:0 2px 16px rgba(15,35,70,.75), 0 1px 3px rgba(15,35,70,.5) !important;}
-body .hero-photo .kicker::before{background:#fcda9c !important;}
-body .hero-photo .hero-dots button.on{background:#F0B93F !important;}
+body .hero-photo .kicker{color:#B07D22 !important; text-shadow:0 2px 16px rgba(15,35,70,.75), 0 1px 3px rgba(15,35,70,.5) !important;}
+body .hero-photo .kicker::before{background:#B07D22 !important;}
+body .hero-photo .hero-dots button.on{background:#B07D22 !important;}
 /* texto ~1 cm mas arriba */
 @media (min-width:901px){ body .hero-photo .hero-body{padding-bottom:148px !important;} }
 @media (max-width:900px){ body .hero-photo .hero-body{padding-top:58px !important; padding-bottom:72px !important;} }
@@ -1373,7 +1373,7 @@ body .topbar .logo-text span{color:#B07D22 !important;}
 body .topbar .logo-text{background:linear-gradient(90deg,#B07D22 0%,#B07D22 12%,#1D3D6E 88%,#1D3D6E 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent !important;}
 body .topbar .logo-text span{color:transparent !important; -webkit-text-fill-color:transparent;}
 /* logo del menu: TOPI amarillo + CONSTRUCTION azul (pedido de TOPI) */
-body .topbar .logo-text{background:none !important; -webkit-background-clip:border-box; background-clip:border-box; -webkit-text-fill-color:#F0B93F; color:#F0B93F !important; text-shadow:0 0 1px rgba(176,125,34,.55);}
+body .topbar .logo-text{background:none !important; -webkit-background-clip:border-box; background-clip:border-box; -webkit-text-fill-color:#B07D22; color:#B07D22 !important; text-shadow:0 0 1px rgba(176,125,34,.55);}
 body .topbar .logo-text span{color:#1D3D6E !important; -webkit-text-fill-color:#1D3D6E; text-shadow:none;}
 /* hero: sin esquinas redondeadas (se veia el azul de fondo en las esquinas) */
 body .hero-photo .hero-shot .slide, body .hero-photo .hero-shot, body .hero-photo .hero-veil{border-radius:0 !important;}
@@ -1400,8 +1400,8 @@ body .topbar .menu a, body .topbar .logo-text, body .topbar .logo-text span, bod
 @media (max-width:1280px){ body .topbar .menu a, body .topbar .logo-text, body .topbar .logo-text span, body .topbar a.btn{font-size:17px !important;} }
 @media (max-width:560px){ body .topbar .logo-text, body .topbar .logo-text span{font-size:15px !important;} }
 /* kicker: dorado un poco mas oscuro/vivo y tamano que entra en una linea */
-body .hero-photo .kicker{color:#F0B93F !important; font-size:18px !important;}
-body .hero-photo .kicker::before{background:#F0B93F !important;}
+body .hero-photo .kicker{color:#B07D22 !important; font-size:18px !important;}
+body .hero-photo .kicker::before{background:#B07D22 !important;}
 @media (max-width:900px){ body .hero-photo .kicker{font-size:15px !important;} }
 /* zonas: letras en blanco solido */
 body .hero-photo .hero-meta div{color:#FFFFFF !important; text-shadow:none !important;}
@@ -1409,8 +1409,8 @@ body .hero-photo .hero-meta div{color:#FFFFFF !important; text-shadow:none !impo
 body .kicker, body section .kicker, body .head .kicker, body #projects .kicker, body #about .kicker, body .process .kicker, body #process .kicker{font-size:21px !important; color:#B07D22 !important; letter-spacing:.14em; font-weight:800 !important;}
 body .kicker::before, body #projects .kicker::before, body #about .kicker::before, body .process .kicker::before, body .kicker::before{background:#B07D22 !important;}
 /* hero: mismo tamano, dorado vivo para que se lea sobre la foto azul */
-body .hero-photo .kicker{font-size:21px !important; color:#F0B93F !important;}
-body .hero-photo .kicker::before{background:#F0B93F !important;}
+body .hero-photo .kicker{font-size:21px !important; color:#B07D22 !important;}
+body .hero-photo .kicker::before{background:#B07D22 !important;}
 .hero-photo .hero-body > div:first-child{max-width:860px !important;}
 @media (max-width:900px){ body .kicker, body section .kicker, body .head .kicker, body #projects .kicker, body #about .kicker, body .hero-photo .kicker{font-size:16px !important;} }
 
@@ -1440,7 +1440,7 @@ body .hero-photo .hero-body > div:nth-child(2){width:max-content; max-width:100%
 body .hero-photo .hero-dots{width:100%; gap:6px;}
 body .hero-photo .hero-dots button{flex:1 1 0; width:auto !important; min-width:0;}
 
-/* ===== Servicios (7/10): tarjetas con foto, esquina amarilla (#F0B93F, el del hero), sin circulos. Misma tipografia, textos y paleta ===== */
+/* ===== Servicios (7/10): tarjetas con foto, esquina amarilla (#B07D22, el del hero), sin circulos. Misma tipografia, textos y paleta ===== */
 body .hero-photo .hero-dots{display:none !important;}
 body #services .svc-cards{display:grid !important; grid-template-columns:1fr 1fr !important; gap:34px !important; align-items:stretch;}
 body #services .svc-card{position:relative; display:flex !important; flex-direction:column; background:#fff !important; border:0 !important; border-radius:22px !important; overflow:visible !important; box-shadow:0 14px 38px rgba(29,61,110,.12) !important; transform:none; opacity:1 !important;}
@@ -1449,7 +1449,7 @@ body #services .svc-card .photo{height:230px !important; border-radius:22px 22px
 body #services .svc-card:hover .photo{transform:none !important;}
 body #services .svc-card::before{display:none !important;}
 /* insignia circular entre la foto y el texto */
-body #services .svc-card::after{content:""; position:absolute; left:28px; top:200px; width:60px; height:60px; border-radius:50%; background-color:#F0B93F; border:4px solid #fff; background-repeat:no-repeat; background-position:center; background-size:28px 28px; box-shadow:0 6px 16px rgba(29,61,110,.25); z-index:3;}
+body #services .svc-card::after{content:""; position:absolute; left:28px; top:200px; width:60px; height:60px; border-radius:50%; background-color:#B07D22; border:4px solid #fff; background-repeat:no-repeat; background-position:center; background-size:28px 28px; box-shadow:0 6px 16px rgba(29,61,110,.25); z-index:3;}
 body #services .svc-card:nth-child(1)::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231D3D6E' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z'/%3E%3C/svg%3E");}
 body #services .svc-card:nth-child(2)::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231D3D6E' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 21l3-1 12-12-2-2L4 18z'/%3E%3Cpath d='M14 6l4 4'/%3E%3Cpath d='M3 21h18'/%3E%3C/svg%3E");}
 body #services .svc-card:nth-child(3)::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231D3D6E' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 11l9-7 9 7'/%3E%3Cpath d='M5 10v10h14V10'/%3E%3Cpath d='M10 20v-6h4v6'/%3E%3C/svg%3E");}
@@ -1463,7 +1463,7 @@ body #services .svc-card:nth-child(3)::after{left:calc(40% - 30px); top:50%; mar
 body #services .svc-card:nth-child(3) .svc-body{padding:34px 34px 30px 56px !important; align-self:center;}
 /* boton y cifras */
 body #services .svc-cta{margin-top:38px;}
-body #services .stats{margin-top:46px !important; background:#F0B93F; border:0 !important; border-radius:22px; padding:34px 40px !important; gap:0;}
+body #services .stats{margin-top:46px !important; background:#B07D22; border:0 !important; border-radius:22px; padding:34px 40px !important; gap:0;}
 body #services .stats div{padding:6px 28px !important; border-right:1px solid rgba(29,61,110,.25) !important;}
 body #services .stats div:first-child{padding-left:0 !important;}
 body #services .stats div:last-child{border-right:0 !important;}
@@ -1489,7 +1489,7 @@ body #services .stats div{padding:28px 30px 0 !important; border-right:1px solid
 body #services .stats div:first-child{padding-left:0 !important;}
 body #services .stats div:last-child{border-right:0 !important;}
 body #services .stats span{opacity:1; color:#4a5568 !important;}
-body #services .svc-cta .btn{background:#F0B93F !important; color:#1D3D6E !important;}
+body #services .svc-cta .btn{background:#B07D22 !important; color:#1D3D6E !important;}
 @media (max-width:900px){ body #services .stats div{padding:14px 0 !important; border-right:0 !important; border-bottom:1px solid rgba(29,61,110,.18);} body #services .stats div:last-child{border-bottom:0 !important;} }
 body #services .svc-cta .btn{border:0 !important;}
 /* sin lineas amarillas: barra de progreso del scroll y subrayado del titulo de Servicios */
@@ -1510,13 +1510,13 @@ body #services .svc-card:nth-child(3) .photo.img-exterior1{background-image:url(
 body #services .svc-card:nth-child(2) .photo{background-image:url('../img/design-consulting-deck.jpg') !important; background-size:cover !important; background-position:center 42% !important;}
 
 /* borde amarillo parcial: solo la esquina inferior derecha, siguiendo la curva de la tarjeta */
-body #services .svc-card::before{display:block !important; content:""; position:absolute; left:0; top:0; width:96px; height:96px; border-left:3px solid #F0B93F; border-top:3px solid #F0B93F; border-top-left-radius:22px; pointer-events:none; z-index:2; transition:width .35s ease, height .35s ease;}
+body #services .svc-card::before{display:block !important; content:""; position:absolute; left:0; top:0; width:96px; height:96px; border-left:3px solid #B07D22; border-top:3px solid #B07D22; border-top-left-radius:22px; pointer-events:none; z-index:2; transition:width .35s ease, height .35s ease;}
 body #services .svc-card:hover::before{width:140px; height:140px;}
 @media (max-width:900px){ body #services .svc-card::before{width:72px; height:72px;} }
 
 
-/* sin circulos sobre las imagenes; amarillo = el del subtitulo del hero (#F0B93F) */
-body #services{--yb:#F0B93F;}
+/* sin circulos sobre las imagenes; amarillo = el del subtitulo del hero (#B07D22) */
+body #services{--yb:#B07D22;}
 body #services .svc-card::after{display:none !important;}
 body #services .svc-card .svc-body{padding:32px 30px 30px !important;}
 body #services .svc-card:nth-child(3) .svc-body{padding:34px 40px 34px !important;}
@@ -1576,7 +1576,7 @@ body #projects .proj-card img[src*="kitchen-white-v2"], body #projects .proj-car
 .img-bath-green-after{background-image:url('../img/bathroom-green-after.jpg'); background-size:cover; background-position:center;}
 .img-bath-green-before{background-image:url('../img/bathroom-green-before.jpg'); background-size:cover; background-position:center;}
 /* Etiqueta temporal de revision (7/10): fotos del portfolio pendientes de edicion. Borrar al editarlas. */
-.proj-card .pc-flag{position:absolute; left:12px; bottom:12px; z-index:3; padding:6px 12px; border-radius:999px; background:#F0B93F; color:#1D3D6E; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; pointer-events:none;}
+.proj-card .pc-flag{position:absolute; left:12px; bottom:12px; z-index:3; padding:6px 12px; border-radius:999px; background:#B07D22; color:#1D3D6E; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; pointer-events:none;}
 /* Hero (7/10): portada 80px mas corta (se recorta abajo); el texto queda donde estaba, un poco mas arriba que antes (solo escritorio) */
 @media (min-width:901px){ body section.hero.hero-photo{min-height:calc(max(min(calc(100vh - 74px),880px), min(58vw,880px)) - 80px) !important;} body .hero-photo .hero-body{padding-bottom:212px !important;} }
 
@@ -1600,7 +1600,7 @@ body #projects .proj-card img[src*="kitchen-white-v2"], body #projects .proj-car
 /* ===== Projects movil (8/10): leyendas del carrusel legibles sobre el azul (titulo blanco, ciudad dorada, una debajo de la otra) ===== */
 body #projects .slide-card .cap{flex-direction:column !important; align-items:flex-start !important; justify-content:flex-start !important; gap:4px !important;}
 body #projects .slide-card .cap b{color:#FFFFFF !important; font-size:18px !important;}
-body #projects .slide-card .cap span{color:#F0B93F !important; font-size:15px !important; font-weight:600;}
+body #projects .slide-card .cap span{color:#B07D22 !important; font-size:15px !important; font-weight:600;}
 body #projects #dots{display:none !important;} /* rayitas blancas de abajo del carrusel, fuera a pedido de Estefania (8/10) */
 
 /* ===== Hero movil (8/10): foto COMPLETA debajo del texto (sin recortar); escritorio no cambia ===== */
@@ -1663,8 +1663,8 @@ body #projects #dots{display:none !important;} /* rayitas blancas de abajo del c
   body .hero-photo .hero-shot .slide.img-bar-original{background-image:url(../img/bar-original-v2.jpg) !important; background-position:center 42% !important;}
   body .hero-photo .hero-body > div:first-child{position:absolute !important; top:30px; left:0; right:0; z-index:3; padding:0 20px !important; order:0 !important;}
   body .hero-photo h1{color:#FFFFFF !important; text-shadow:0 2px 14px rgba(10,25,55,.65), 0 1px 3px rgba(10,25,55,.6) !important;}
-  body .hero-photo .kicker{color:#F0B93F !important; text-shadow:0 1px 3px rgba(10,25,55,.9), 0 0 14px rgba(10,25,55,.7) !important;}
-  body .hero-photo .kicker::before{background:#F0B93F !important;}
+  body .hero-photo .kicker{color:#B07D22 !important; text-shadow:0 1px 3px rgba(10,25,55,.9), 0 0 14px rgba(10,25,55,.7) !important;}
+  body .hero-photo .kicker::before{background:#B07D22 !important;}
   body .hero-photo .hero-meta{order:2 !important; overflow:hidden; display:block !important; padding:0 !important; border-top:0 !important; background:#FFFFFF !important;}
   body .hero-photo .hero-meta .meta-track{display:flex !important; width:max-content; animation:topiMeta 16s linear infinite; padding:14px 0;}
   body .hero-photo .hero-meta .meta-dup{display:block !important;}
@@ -1685,3 +1685,20 @@ body #projects #dots{display:none !important;} /* rayitas blancas de abajo del c
   body .hero-photo .hero-veil{display:block !important; position:absolute !important; top:0 !important; left:0 !important; right:0 !important; bottom:auto !important; height:430px !important; z-index:2 !important; pointer-events:none;
     background:radial-gradient(ellipse 135% 80% at 0% 0%, rgba(29,61,110,.92) 0%, rgba(29,61,110,.78) 34%, rgba(29,61,110,.4) 66%, rgba(29,61,110,0) 100%) !important;}
 }
+
+/* ===== Dorado TOPI unico (#B07D22) en todo el sitio (8/10) =====
+   Sobre fondo claro el dorado casi no se lee: contorno azul fino solo en esas letras. Borrar este bloque lo quita. */
+body .topbar .logo-text{color:#B07D22 !important; -webkit-text-fill-color:#B07D22 !important; -webkit-text-stroke:0; text-shadow:none !important;}
+body .topbar .logo-text span{color:#1D3D6E !important; -webkit-text-fill-color:#1D3D6E !important;}
+/* Rotulos sobre fondo claro (SERVICES, THE TOPI EXPERIENCE, OUR STORY, GET IN TOUCH): texto en dorado #B07D22 (el del logo, que eligieron); la rayita queda dorada TOPI */
+body #services .kicker, body #process .kicker, body #about .kicker, body #contact .kicker, body .process .kicker, body section .kicker{color:#B07D22 !important; -webkit-text-stroke:0;}
+body .hero-photo .kicker, body #top .kicker{color:#B07D22 !important;}
+body .hero-photo .kicker::before, body #top .kicker::before{background:#B07D22 !important;}
+body #projects .kicker{color:#B07D22 !important;}
+
+/* Telefono del boton azul del menu: numeros en blanco (8/10) */
+body .topbar a.btn, body .topbar a.btn:visited{color:#FFFFFF !important;}
+
+/* Numeros sobre dorado: en blanco y negrita para que se vean (8/10) */
+body #services .svc-steps li::before{color:#FFFFFF !important; font-weight:800 !important;}
+body .process .steps4 .step.on .sq, body .process .steps4 .step.on .sq::before{color:#FFFFFF !important; font-weight:800 !important;}
