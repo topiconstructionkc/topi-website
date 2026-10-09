@@ -1722,3 +1722,17 @@ body .hero-photo .kicker::before, body #top .kicker::before{background:#E0A83A !
 
 /* Boton SEND del formulario: letras en blanco (9/10) */
 body form.quote-form button[type="submit"], body form.quote-form button[type="submit"].btn{color:#FFFFFF !important;}
+
+/* Carrusel de Projects en celular: se suman las 2 tarjetas que faltaban respecto de escritorio (sotano con bar y cocina blanca) (9/10) */
+.img-basement-bar-after{background-image:url('../img/basement-after-v3.jpg'); background-size:cover; background-position:center;}
+.img-basement-bar-before{background-image:url('../img/interior-before.jpg'); background-size:cover; background-position:center;}
+.img-kitchen-white-after{background-image:url('../img/kitchen-white-v2.jpg'); background-size:cover; background-position:center;}
+.img-kitchen-white-before{background-image:url('../img/kitchen-white-before.jpg'); background-size:cover; background-position:center;}
+
+/* Tarjeta "Deck remodel": el encuadre se corre a la derecha para que se vea la punta de la escalera (9/10) */
+body #projects .proj-card img[src*="deck-after"]{object-position:90% 50% !important;}
+body #projects .proj-card img[src*="deck-before"]{object-position:78% 50% !important;}
+
+/* Boton "Book your consultation": azul con letras blancas; al pasar el mouse, salmon #FCDA9C con letras azules (9/10) */
+body #services .svc-cta .btn{background:#1D3D6E !important; border-color:#1D3D6E !important; color:#FFFFFF !important;}
+body #services .svc-cta .btn:hover, body #services .svc-cta .btn:focus-visible{background:#FCDA9C !important; border-color:#FCDA9C !important; color:#1D3D6E !important;}
