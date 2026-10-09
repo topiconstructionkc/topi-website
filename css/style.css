@@ -1788,3 +1788,86 @@ body #projects #track .img-bath-biersmith-before{background-position:50% 50% !im
 /* (9/10) Our Story: sin foto, bloque azul a la espera de la foto de la familia. Reversible: borrar este bloque. */
 body #about .photo.img-living-fireplace,
 body #about > .inner .about .photo{background-image:none !important; background-color:#1D3D6E !important;}
+
+/* (9/10) Botones más chicos en móvil/tablet: "Book your consultation" y "Schedule a walkthrough" (12 px) y "Send" (14 px). Reversible: borrar este bloque. */
+@media (max-width:900px){
+  body #services .svc-cta, body .process .steps-cta.steps-cta-btn{display:flex !important; flex-direction:column !important; align-items:center !important; justify-content:center !important;}
+  body #services .svc-cta .btn, body .process .steps-cta.steps-cta-btn .btn{display:inline-flex !important; width:auto !important; max-width:100% !important; min-height:0 !important; font-size:12px !important; line-height:1.2 !important; padding:10px 20px !important; margin:0 auto !important;}
+  body #contact form .btn, body #contact .btn[type="submit"], body #contact button.btn{font-size:14px !important; line-height:1.2 !important; padding:14px 26px !important; min-height:0 !important;}
+}
+
+/* (9/10) Portfolio en celular/tablet táctil: el "antes" aparece solo mientras se mantiene presionado (clase .pressing la pone js/main.js). Reversible: borrar este bloque. */
+@media (hover:none){
+  body #projects #track .hover-swap{-webkit-touch-callout:none; -webkit-user-select:none; user-select:none;}
+  body #projects #track .hover-swap:hover .hover-layer{opacity:0 !important;}
+  body #projects #track .hover-swap.pressing .hover-layer{opacity:1 !important;}
+}
+
+/* (9/10) Portfolio en celular/tablet: menos espacio arriba de las fotos, recuadro azul sin esquinas redondeadas y fotos un poco más anchas. Reversible: borrar este bloque. */
+@media (max-width:900px){
+  body #projects{padding-top:24px !important; padding-bottom:10px !important; border-radius:0 !important;}
+  body #projects #track{padding-bottom:0 !important;}
+  body #projects #track .cap{margin-top:10px !important; padding-top:10px !important; padding-bottom:0 !important;}
+  body #projects .dots{display:none !important;}
+  body #projects .inner{padding-left:14px !important; padding-right:14px !important;}
+  body #projects .head{margin-bottom:6px !important;}
+  body #projects .carousel-top{margin-bottom:6px !important; gap:0 !important;}
+  body #projects .arrows button{width:30px !important; height:30px !important; font-size:17px !important;}
+}
+
+/* (9/10) Flechas del carrusel de Portfolio: redondas, rellenas de blanco con la flecha azul, sin borde. Reversible: borrar este bloque. */
+body #projects .arrows button{width:28px !important; height:28px !important; border-radius:50% !important; background:#fff !important; color:#1D3D6E !important; border:0 !important; font-size:16px !important; line-height:1 !important; padding:0 !important; display:inline-flex !important; align-items:center !important; justify-content:center !important;}
+body #projects .arrows button:hover, body #projects .arrows button:active, body #projects .arrows button:focus-visible{background:#fff !important; color:#1D3D6E !important; opacity:.8 !important;}
+body #projects .arrows button:disabled{opacity:.4 !important;}
+
+/* (9/10) Portfolio en celular/tablet: foto centrada (una tarjeta por pantalla, sin difuminado en los bordes) y nombre/ciudad completos, sin cortarse abajo. Reversible: borrar este bloque. */
+@media (max-width:900px){
+  body #projects #track{grid-auto-columns:100% !important; gap:14px !important; -webkit-mask-image:none !important; mask-image:none !important;}
+  body #projects #track .slide-card{width:100% !important; min-width:0 !important;}
+  body #projects{padding-bottom:8px !important;}
+  body #projects #track .cap{padding-bottom:0 !important;}
+}
+
+/* (9/10) Servicios en celular/tablet: menos espacio arriba y abajo del botón "Book your consultation". Reversible: borrar este bloque. */
+@media (max-width:900px){
+  body #services .svc-cta{margin-top:14px !important; margin-bottom:0 !important;}
+  body #services .stats{margin-top:16px !important;}
+  body #services .stats div{padding-top:14px !important;}
+}
+
+/* (9/10) Proceso en celular/tablet: menos espacio arriba y abajo del botón "Schedule a walkthrough". Reversible: borrar este bloque. */
+@media (max-width:900px){
+  body .process .steps-cta.steps-cta-btn{margin-top:14px !important;}
+  body .process{padding-bottom:26px !important;}
+}
+
+/* (9/10) Contacto en celular/tablet: botones de llamada, correo y ubicación más chicos y centrados. Reversible: borrar este bloque. */
+@media (max-width:900px){
+  body .contact .phone-btns{display:flex !important; flex-direction:column !important; align-items:center !important; gap:10px !important; max-width:none !important;}
+  body .contact .phone-btn{width:auto !important; min-width:292px; max-width:100% !important; justify-content:center !important; padding:11px 20px !important; gap:10px !important; min-height:0 !important;}
+  body .contact .phone-btn span{font-size:13px !important; letter-spacing:0 !important; white-space:nowrap; line-height:1.2 !important;}
+  body .contact .phone-btn svg{width:16px !important; height:16px !important;}
+  body .contact .cinfo{display:flex !important; flex-direction:column !important; align-items:center !important;}
+  body .contact .cinfo .ci-row{width:auto !important; min-width:292px; max-width:100% !important; justify-content:center !important; padding:10px 20px !important; gap:10px !important;}
+  body .contact .cinfo .ci-row, body .contact .cinfo .ci-row a, body .contact .cinfo .ci-row span{font-size:13px !important; line-height:1.2 !important;}
+  body .contact .cinfo .ci-row svg{width:16px !important; height:16px !important;}
+}
+
+/* (9/10) Pie de página en celular/tablet: el logo queda más cerca del recuadro de arriba. Reversible: borrar este bloque. */
+@media (max-width:900px){
+  body #contact{padding-bottom:18px !important;}
+  body footer.site-footer{margin-top:8px !important;}
+  body footer.site-footer .foot-simple{padding-top:10px !important;}
+}
+
+/* (9/10) Proceso en celular/tablet: círculos numerados más arriba (menos espacio sobre ellos y debajo) y título de cada paso apenas más chico. Reversible: borrar este bloque. */
+@media (max-width:900px){
+  body .process .steps4 .step{padding-top:16px !important;}
+  body .process .steps4 .step .sq{margin-bottom:8px !important;}
+  body .process .steps4 .step h3{font-size:19.5px !important; text-wrap:balance;}
+}
+
+/* (9/10) Botón "Send" del formulario en celular/tablet: un poco más chico (12 px de letra, menos alto). Reversible: borrar este bloque. */
+@media (max-width:900px){
+  body #contact form .btn, body #contact .btn[type="submit"], body #contact button.btn{font-size:12px !important; padding:10px 22px !important; line-height:1.2 !important; min-height:0 !important;}
+}

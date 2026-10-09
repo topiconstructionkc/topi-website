@@ -233,3 +233,29 @@
     window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'});
   });
 })();
+/* (9/10) Portfolio en celular: la foto "antes" se ve solo mientras se mantiene presionada la tarjeta; al soltar vuelve la foto "después". */
+(function(){
+  var track = document.getElementById('track'); if(!track) return;
+  var timer = null, active = null, sx = 0, sy = 0, lastTouch = 0;
+  function clear(){ clearTimeout(timer); timer = null; if(active){ active.classList.remove('pressing'); active = null; } }
+  function cardOf(e){ return e.target && e.target.closest ? e.target.closest('.hover-swap') : null; }
+  track.addEventListener('touchstart', function(e){
+    lastTouch = Date.now();
+    var card = cardOf(e); if(!card) return;
+    var t = e.touches[0]; sx = t.clientX; sy = t.clientY; clear();
+    timer = setTimeout(function(){ card.classList.add('pressing'); active = card; }, 60);
+  }, {passive:true});
+  track.addEventListener('touchmove', function(e){
+    lastTouch = Date.now();
+    var t = e.touches[0]; if(Math.abs(t.clientX - sx) > 10 || Math.abs(t.clientY - sy) > 10) clear();
+  }, {passive:true});
+  ['touchend','touchcancel'].forEach(function(n){ document.addEventListener(n, function(){ lastTouch = Date.now(); clear(); }, {passive:true}); });
+  /* mouse (ventana angosta en computadora / modo celular del navegador): se mantiene el clic para ver el antes */
+  track.addEventListener('mousedown', function(e){
+    if(Date.now() - lastTouch < 800) return;
+    var card = cardOf(e); if(!card) return; clear(); card.classList.add('pressing'); active = card;
+  });
+  ['mouseup','mouseleave'].forEach(function(n){ track.addEventListener(n, function(){ if(Date.now() - lastTouch >= 800) clear(); }); });
+  document.addEventListener('mouseup', function(){ if(Date.now() - lastTouch >= 800) clear(); });
+  track.addEventListener('contextmenu', function(e){ if(cardOf(e)) e.preventDefault(); });
+})();
