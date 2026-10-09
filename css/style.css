@@ -1562,7 +1562,7 @@ body .about blockquote.pull, body #about blockquote.pull{border-left:0 !importan
 
 /* ===== Projects: nuevo bano (Biersmith) en una tarjeta que estaba vacia ===== */
 .img-bath-biersmith-after{background-image:url('../img/bathroom-biersmith-after.jpg'); background-size:cover; background-position:center;}
-.img-bath-biersmith-before{background-image:url('../img/bathroom-biersmith-before-v2.jpg'); background-size:cover; background-position:center;}
+.img-bath-biersmith-before{background-image:url('../img/bathroom-biersmith-before-v3.jpg'); background-size:cover; background-position:center;}
 /* Baño basement (7/10): antes al pasar el cursor */
 .img-bath-basement-before{background-image:url('../img/bathroom-basement-before.jpg'); background-size:cover; background-position:center;}
 .img-bath-basement-after{background-image:url('../img/bathroom-basement-after.jpg'); background-size:cover; background-position:center;}
@@ -1782,5 +1782,9 @@ body #projects .proj-card img[src*="basement-new-before"]{object-position:45% 50
 body #projects #track .img-basement-new-before{background-position:45% 50% !important;}
 
 /* Bano Biersmith, "antes": foto nueva (v2) con inodoro, ducha y piso de mosaico (9/10) */
-body #projects .proj-card img[src*="bathroom-biersmith-before"]{object-position:50% 62% !important;}
-body #projects #track .img-bath-biersmith-before{background-position:50% 62% !important;}
+body #projects .proj-card img[src*="bathroom-biersmith-before"]{object-position:50% 50% !important;}
+body #projects #track .img-bath-biersmith-before{background-position:50% 50% !important;}
+
+/* (9/10) Our Story: sin foto, bloque azul a la espera de la foto de la familia. Reversible: borrar este bloque. */
+body #about .photo.img-living-fireplace,
+body #about > .inner .about .photo{background-image:none !important; background-color:#1D3D6E !important;}
