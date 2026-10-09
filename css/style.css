@@ -1752,3 +1752,12 @@ body #projects .proj-card img[src*="kitchen-blue-after"], body #projects .proj-c
 /* Carrusel movil: tarjeta Kitchen remodel nueva (despues azul / antes con tomacorrientes), encuadre en la cocina (9/10) */
 body #projects #track .img-kitchen-blue-after{background-image:url('../img/kitchen-blue-after.jpg') !important; background-size:cover !important; background-position:56% 50% !important;}
 body #projects #track .img-kitchen-blue-before{background-image:url('../img/kitchen-blue-before.jpg') !important; background-size:cover !important; background-position:56% 50% !important;}
+
+/* Deck & Patio: fotos nuevas (despues con barandas y escalera, antes del patio desde el deck) en web y movil; sin "Pending edit" (9/10) */
+body #projects .proj-card img[src*="deck-new-after"], body #projects .proj-card img[src*="deck-new-before"]{object-position:57% 50% !important;}
+body #projects #track .img-deck-new-after{background-image:url('../img/deck-new-after-v3.jpg') !important; background-size:cover !important; background-position:57% 50% !important;}
+body #projects #track .img-deck-new-before{background-image:url('../img/deck-new-before.jpg') !important; background-size:cover !important; background-position:57% 50% !important;}
+
+/* Deck & Patio: nueva foto vertical del despues (deck-new-after-v3.jpg), a tarjeta completa, sin marco; el antes conserva su encuadre (9/10) */
+body #projects .proj-card img[src*="deck-new-after"]{object-position:50% 62% !important;}
+body #projects #track .img-deck-new-after{background-position:50% 62% !important;}
