@@ -1871,3 +1871,27 @@ body #projects .arrows button:disabled{opacity:.4 !important;}
 @media (max-width:900px){
   body #contact form .btn, body #contact .btn[type="submit"], body #contact button.btn{font-size:12px !important; padding:10px 22px !important; line-height:1.2 !important; min-height:0 !important;}
 }
+
+/* (9/10) Portfolio en celular/tablet: fotos más cuadradas para que se vea más de cada trabajo (antes 3:4, muy recortadas). Reversible: borrar este bloque. */
+@media (max-width:900px){
+  body #projects #track .slide-card .photo{aspect-ratio:1/1 !important;}
+  body #projects #track .img-kitchen-blue-after, body #projects #track .img-kitchen-blue-before{background-position:50% 50% !important;}
+}
+
+/* (9/10) Botones azules en celular/tablet: todos con el tamaño de "See our work" (14 px, 13/26 px de relleno, 1,4 px entre letras). Reversible: borrar este bloque. */
+@media (max-width:900px){
+  body #services .svc-cta .btn, body .process .steps-cta.steps-cta-btn .btn{font-size:14px !important; padding:13px 26px !important; letter-spacing:1.4px !important; line-height:1.2 !important;}
+  body #contact form .btn, body #contact .btn[type="submit"], body #contact button.btn{font-size:14px !important; padding:13px 26px !important; letter-spacing:1.4px !important; line-height:1.2 !important;}
+  body .contact .phone-btn{padding:13px 22px !important;}
+  body .contact .phone-btn span{font-size:14px !important; letter-spacing:.3px !important;}
+  body .contact .cinfo .ci-row{padding:12px 22px !important;}
+  body .contact .cinfo .ci-row, body .contact .cinfo .ci-row a, body .contact .cinfo .ci-row span{font-size:14px !important;}
+}
+@media (max-width:900px){
+  body #services .svc-cta .btn, body .process .steps-cta.steps-cta-btn .btn, body #contact form .btn, body #contact .btn[type="submit"], body #contact button.btn, body .contact .phone-btn, body .contact .cinfo .ci-row{min-height:44px !important; box-sizing:border-box !important; align-items:center !important;}
+}
+
+/* (9/10) Portfolio en celular/tablet: "antes" automático (lo pone js/main.js con la clase .autobefore durante 2 s). Reversible: borrar este bloque. */
+@media (max-width:900px){
+  body #projects #track .hover-swap.autobefore .hover-layer{opacity:1 !important;}
+}

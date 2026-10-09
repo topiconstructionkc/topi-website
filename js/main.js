@@ -259,3 +259,32 @@
   document.addEventListener('mouseup', function(){ if(Date.now() - lastTouch >= 800) clear(); });
   track.addEventListener('contextmenu', function(e){ if(cardOf(e)) e.preventDefault(); });
 })();
+
+/* (9/10) Portfolio en celular/tablet: cada foto que queda a la vista muestra el "antes" solo, ~0,8 s después de llegar, y lo mantiene 2 s antes de volver al "después". Reversible: borrar este bloque (y el bloque ".autobefore" de css/style.css). */
+(function(){
+  var track = document.getElementById('track'); if(!track) return;
+  var slides = track.querySelectorAll('.slide-card'); if(!slides.length) return;
+  var mq = window.matchMedia('(max-width:900px)');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cur = null, t1 = null, t2 = null, shown = null;
+  function clear(){ clearTimeout(t1); clearTimeout(t2); if(shown){ shown.classList.remove('autobefore'); shown = null; } }
+  function keyOf(s){ var p = s.querySelector('.hover-swap'); return p ? p.className.replace(/\b(hover-swap|pressing|autobefore|photo|img)\b/g,'').trim() : ''; }
+  function active(){
+    var sl = track.scrollLeft, best = 0, bd = 1e9;
+    for(var i=0;i<slides.length;i++){ var d = Math.abs((slides[i].offsetLeft - track.offsetLeft) - sl); if(d < bd){ bd = d; best = i; } }
+    return {i:best, d:bd};
+  }
+  function visible(){ var r = track.getBoundingClientRect(); return r.bottom > 0 && r.top < window.innerHeight; }
+  setInterval(function(){
+    if(reduce || !mq.matches || document.hidden || !visible()){ clear(); cur = null; return; }
+    var a = active(); if(a.d > 4) return;
+    var k = keyOf(slides[a.i]); if(k === cur) return;
+    cur = k; clear();
+    var card = slides[a.i].querySelector('.hover-swap'); if(!card) return;
+    t1 = setTimeout(function(){
+      if(card.classList.contains('pressing')) return;
+      card.classList.add('autobefore'); shown = card;
+      t2 = setTimeout(function(){ card.classList.remove('autobefore'); if(shown === card) shown = null; }, 2000);
+    }, 800);
+  }, 200);
+})();
