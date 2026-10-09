@@ -1712,3 +1712,13 @@ body .phone-btns .phone-btn span, body .phone-btn.mail-btn span{color:inherit !i
 body .phone-btns .phone-btn svg{color:#FFFFFF !important;}
 body .phone-btns .phone-btn:hover, body .phone-btn.mail-btn:hover, body .phone-btns .phone-btn:focus-visible{background:#FCDA9C !important; color:#1D3D6E !important;}
 body .phone-btns .phone-btn:hover svg, body .phone-btns .phone-btn:focus-visible svg{color:#1D3D6E !important;}
+
+/* "Schedule a walkthrough": al pasar el mouse, salmon de la paleta TOPI (#FCDA9C) con texto azul, como los botones de contacto (9/10) */
+body .process .steps-cta .btn:hover, body .process .steps-cta .btn:focus-visible, body .process .steps-cta.steps-cta-btn .btn:hover, body .process .steps-cta.steps-cta-btn .btn:focus-visible{background:#FCDA9C !important; border-color:#FCDA9C !important; color:#1D3D6E !important;}
+
+/* Linea "Licensed & Insured..." sobre las letras grandes del hero: dorado #E0A83A (el del logo original) en vez de #B07D22, que se perdia sobre la foto (9/10) */
+body .hero-photo .kicker, body #top .kicker{color:#E0A83A !important;}
+body .hero-photo .kicker::before, body #top .kicker::before{background:#E0A83A !important;}
+
+/* Boton SEND del formulario: letras en blanco (9/10) */
+body form.quote-form button[type="submit"], body form.quote-form button[type="submit"].btn{color:#FFFFFF !important;}
