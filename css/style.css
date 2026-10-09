@@ -1736,3 +1736,12 @@ body #projects .proj-card img[src*="deck-before"]{object-position:78% 50% !impor
 /* Boton "Book your consultation": azul con letras blancas; al pasar el mouse, salmon #FCDA9C con letras azules (9/10) */
 body #services .svc-cta .btn{background:#1D3D6E !important; border-color:#1D3D6E !important; color:#FFFFFF !important;}
 body #services .svc-cta .btn:hover, body #services .svc-cta .btn:focus-visible{background:#FCDA9C !important; border-color:#FCDA9C !important; color:#1D3D6E !important;}
+
+/* Boton "Schedule a walkthrough": centrado en mobile/tablet (9/10) */
+@media (max-width:900px){
+  body .process .steps-cta.steps-cta-btn{display:flex !important; flex-direction:column !important; align-items:center !important; justify-content:center !important; text-align:center;}
+  body .process .steps-cta.steps-cta-btn .btn{margin-left:auto !important; margin-right:auto !important; justify-self:center !important;}
+}
+
+/* Carrusel movil, Deck & Patio: misma foto que la version web (deck-after.jpg), encuadre con la escalera (9/10) */
+body #projects #track .slide-card .photo.img.img-deck-patio{background-image:url('../img/deck-after.jpg') !important; background-size:cover !important; background-position:68% 50% !important;}
