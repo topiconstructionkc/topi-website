@@ -1745,3 +1745,10 @@ body #services .svc-cta .btn:hover, body #services .svc-cta .btn:focus-visible{b
 
 /* Carrusel movil, Deck & Patio: misma foto que la version web (deck-after.jpg), encuadre con la escalera (9/10) */
 body #projects #track .slide-card .photo.img.img-deck-patio{background-image:url('../img/deck-after.jpg') !important; background-size:cover !important; background-position:68% 50% !important;}
+
+/* Tarjeta Kitchen remodel (escritorio): fotos nuevas azul (despues) y gabinetes rojizos (antes, con los huecos de tomacorrientes); encuadre centrado en la cocina (9/10) */
+body #projects .proj-card img[src*="kitchen-blue-after"], body #projects .proj-card img[src*="kitchen-blue-before"]{object-position:56% 50% !important;}
+
+/* Carrusel movil: tarjeta Kitchen remodel nueva (despues azul / antes con tomacorrientes), encuadre en la cocina (9/10) */
+body #projects #track .img-kitchen-blue-after{background-image:url('../img/kitchen-blue-after.jpg') !important; background-size:cover !important; background-position:56% 50% !important;}
+body #projects #track .img-kitchen-blue-before{background-image:url('../img/kitchen-blue-before.jpg') !important; background-size:cover !important; background-position:56% 50% !important;}
