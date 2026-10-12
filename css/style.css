@@ -1895,3 +1895,20 @@ body #projects .arrows button:disabled{opacity:.4 !important;}
 @media (max-width:900px){
   body #projects #track .hover-swap.autobefore .hover-layer{opacity:1 !important;}
 }
+
+/* ===== Dimensiones tipo Garney (12/10): SOLO tamanos de texto en celular (600 px o menos); diseno, colores, tipografias y botones sin cambios. Para revertir, borrar este bloque. ===== */
+@media (max-width:600px){
+  /* Titulo de portada: mas grande, casi a todo el ancho (Garney ~60 px; Montserrat es mas ancha, por eso 52) */
+  body .hero-photo h1{font-size:clamp(40px,13.3vw,54px) !important; line-height:1.02 !important; max-width:100% !important;}
+  /* Titulos de seccion */
+  body .section h2, body #services .head h2, body #projects .head h2, body #process .head h2, body #about .head h2, body #contact h2{font-size:32px !important; line-height:1.1 !important; letter-spacing:.5px !important;}
+  /* Subtitulos */
+  body #services .svc-card .svc-body h3{font-size:26px !important; line-height:1.12 !important;}
+  body #process .step h3{font-size:23px !important; line-height:1.2 !important;}
+  body #contact h3{font-size:26px !important; line-height:1.15 !important; letter-spacing:1.5px !important;}
+  /* Texto corrido y listas (Garney usa 18 px en la mayoria del texto) */
+  body #services .svc-card .svc-body li, body #services .svc-card .svc-body p, body #process p, body #about p, body #contact .lede{font-size:18px !important; line-height:1.55 !important;}
+  body #services .svc-card .svc-body ul li{line-height:1.35 !important;}
+  /* Pie */
+  body .site-footer .foot-rights{font-size:14px !important;}
+}
