@@ -1912,3 +1912,25 @@ body #projects .arrows button:disabled{opacity:.4 !important;}
   /* Pie */
   body .site-footer .foot-rights{font-size:14px !important;}
 }
+
+/* ===== Our Story en celular (12/10): tarjeta separada de los bordes de la pantalla, mas aire adentro, y el recuadro de la foto va al principio, antes del texto. Para revertir, borrar este bloque. ===== */
+@media (max-width:900px){
+  body #about{margin-left:12px !important; margin-right:12px !important;}
+  body #about > .inner{padding-left:22px !important; padding-right:22px !important;}
+  body:not(.vb) .about{gap:18px !important;}
+  body:not(.vb) .about > .photo{order:-1 !important;}
+  body #about{padding-top:20px !important;}
+  body #about .head{margin-bottom:14px !important;}
+}
+
+/* ===== Rotulo "THE TOPI EXPERIENCE" (12/10): mismo tamano que los otros rotulos (SERVICES, OUR STORY, etc.) en celular y tablet. Para revertir, borrar este bloque. ===== */
+@media (max-width:900px){
+  body #process .kicker, body .process .kicker{font-size:16px !important;}
+}
+
+/* ===== Portfolio en celular y tablet (12/10): los dorados del Portfolio ("PORTFOLIO", su rayita y la ciudad de cada proyecto) pasan al dorado #E0A83A, el mismo de la linea "Licensed & Insured" del hero (que no cambia), para que se lean mejor sobre el azul. Solo color; escritorio sin cambios. Para revertir, borrar este bloque. ===== */
+@media (max-width:900px){
+  body #projects .kicker{color:#E0A83A !important;}
+  body #projects .kicker::before{background:#E0A83A !important;}
+  body #projects .slide-card .cap span{color:#E0A83A !important;}
+}
