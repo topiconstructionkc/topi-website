@@ -1235,3 +1235,6 @@ body #projects .arrows button:disabled{opacity:.4 !important;}
 body footer.site-footer .social-link{background:transparent; color:inherit; width:48px; height:48px;}
 body footer.site-footer .social-link svg{width:30px; height:30px;}
 body footer.site-footer .social-link:hover{background:transparent; transform:translateY(-3px);}
+
+/* ---- (14/10) Etiquetas de ciudad de la grilla: una sola línea, sin salirse de la tarjeta ("North Kansas City") ---- */
+body .proj-card .pc-loc{white-space:nowrap; font-size:clamp(11px,1vw,15px) !important; letter-spacing:.04em; padding:6px 11px; max-width:calc(100% - 20px); overflow:hidden; text-overflow:ellipsis;}
