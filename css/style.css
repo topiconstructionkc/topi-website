@@ -1229,3 +1229,9 @@ body #projects .arrows button:disabled{opacity:.4 !important;}
   body #process .steps4 .step{padding-bottom:14px !important;}
   body #process .steps4 .step .sq{width:32px !important; height:32px !important;}
 }
+
+
+/* ---- (14/10) Iconos de redes del pie con sus colores de marca, sin círculo azul ---- */
+body footer.site-footer .social-link{background:transparent; color:inherit; width:48px; height:48px;}
+body footer.site-footer .social-link svg{width:30px; height:30px;}
+body footer.site-footer .social-link:hover{background:transparent; transform:translateY(-3px);}
